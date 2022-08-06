@@ -42,15 +42,15 @@ body{
 }
 body{
  
-  font-size: 12px;
+  font-size: 14px;
   /* color: rgba(255, 255, 255, 1); */
 }
 
 
 
 .wrapper{
- /*  background-color:rgba(0,0,0,1); */
-  overflow: hidden;
+  position: relative;
+    overflow: hidden;
   min-height: 100%;
   width: 100%;
   display: flex;
@@ -60,7 +60,7 @@ body{
 }
 
 .wrapper__container{
-  max-width: 1605px;
+  max-width: 1600px;
   box-sizing:border-box;
   position: relative;
   display: grid;
@@ -77,51 +77,46 @@ body{
   flex-wrap: wrap;
   align-items:center;
   margin: 0 auto;
-  background-color:rgba(0,0,0,0.2);
 }
 
 
-
-
-.header{
-  position:fixed;
-  top: 0;
-  left: 0;
-  max-width: 100%;
-  height: 100vw;
-}
-
-  .header__container{
+  .header{
+    position: fixed;
+    margin: 0 auto;
+    width: 100%;
   display: grid;
   grid-template-columns: repeat(18,1fr);
-  grid-template-rows: repeat(20,25px);
+  grid-template-rows: repeat(2,25px);
   gap: 15px;
+  border:1px solid rgba(0,0,0,1);
+  background-color:rgba(0,0,0,0.4);
+  z-index: 500;
+  color:rgba(255,255,255,1);
 }
 
 /* header-logo */
 
 .header__logo {
-  grid-column: 4/5;
-  grid-row: 1/3.5;
+  grid-column: 2/3;
+  grid-row: 1/3;
+  padding: 2px;
   border:1px solid rgba(0,0,0,0.2);
-  margin: 0 auto;
-  position: fixed;
-  left: 18%;
 }
 img.header__logo__icon {
-  max-width: 70px;
-  height: 61px;
-  padding: 5px;
+  max-width: 1fr;
+  height: 55px;
+  margin: 0 auto;
+
 }
 
 /* header-title */
 
 
 .header__title{
-  grid-column: 5/8;
-  grid-row: 1/3.5;
-  border:1px solid rgba(0,0,0,0.2);
-  
+  grid-column: 3/8;
+  grid-row: 1/3;  
+  border:1px solid rgba(0,0,0,0.1);
+
 }
 .header__title__content{
   
@@ -131,87 +126,200 @@ img.header__logo__icon {
   display: flex;
   flex-direction: column;
   align-content:space-around;
-  font-size: 1.7em;
+  font-size: 2em;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
 }
 .title__link {
+  color:rgba(255,255,255,1);
   font-family: "Open sans";
   flex: 1 1 100%;
   letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
-  color: rgba(255,255,255,1);
 }
 .header__subtitle {
   font-family: "Open Sauce";
-  font-size: 1.2em;
+  font-size: 1.6em;
   text-align: center;
   flex: 1 1 100%;
-  color: rgba(255,255,255,1);
 }
 
 
 /* header-nav */
 
 .nav {
-  grid-column: 8/12;
-  grid-row: 1/3.5;
-  border:1px solid rgba(0,0,0,0.2);
+  grid-column: 13/-2;
+  grid-row: 1/3;
 }
-.nav__content{
-  padding: 5px;
-}
+
 .nav__menu {
+  height: 65px;
   display: flex;
   flex-wrap: wrap;
   align-items:center;
-  justify-content: space-evenly;
+  justify-content: center;
+  padding: 10px;
+
 }
 .nav__menu__item {
-  margin: 0 auto;
-  border:1px solid rgba(0,0,0,0.2);
-  padding: 5px;
+  margin: 0 3px;
+  padding: 2px;
 }
 .nav__menu__link {
   text-transform: uppercase;
   text-decoration: none;
-  color: rgba(0,0,0,0.8);
+  color:rgba(255,255,255,1);
 }
 
 /* header-form*/
 
 .header__login__form {
-  grid-column: 12/-4;
-  grid-row: 1/3.5;
+  grid-column: 8/13;
+  grid-row: 1/3;
   border:1px solid rgba(0,0,0,0.2);
 }
 .header__client__log__content{
-  justify-content: space-evenly;
+align-items:center;
+justify-content: space-around;
   flex-wrap: nowrap;
+  padding: 5px;
 }
+.header__client__log__content input[type="email"],
+.header__client__log__content input[type="password"]{
+  max-width: 90px;
+}
+
 .client__pass ,
 .client__log,
 .client__mail {
-  padding: 5px;
+  padding: 3px;
 }
-.email {
+.email,
+.password {
+  font-size:0.8em;
+}
+.header__client__log__content label{
+
+}
+.btn {
+  font-size: 0.7em;
+  border-radius:10px/10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color:rgba(255,255,255,1);
+  background-color:rgba(231, 161, 125, 1);
+}
+.submit__btn {
+  padding: 7px;
+}
+
+/*______________________________________________*/
+
+@media (max-width:1470px){
+  
+}
+@media (max-width:1087px){
   
 }
 
-.password {
+ @media (max-width:991.98px){
+  body{
+    font-size: 13px;
+  }
+  .header__logo {
+    grid-column: 1/2;
+  }
+  .header__title{
+    grid-column: 2/7;
+  }
+  .nav {
+    grid-column: 13/19;
+  }
+  .header__login__form {
+    grid-column: 7/13;
+  }
+  .header__client__log__content input[type="email"],
+.header__client__log__content input[type="password"]{
+  max-width: 80px;
 }
-.btn {
-  padding: 10px;
-  border-radius:10px/10px;
-  text-decoration: none;
-  color:rgba(255,255,255,1);
-  background-color:orange;
-  margin: 0 auto;
+.header__client__log__content{
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width:767.98px){
+  body{
+    font-size: 12px;
+  }
+  .header__logo {
+    grid-column: 1/2;
+  }
+  .header__title{
+    grid-column: 2/6;
+  }
+  .nav {
+    grid-column: 13/19;
+  }
+  .header__login__form {
+    grid-column: 6/13;
+  }
+  .header__client__log__content input[type="email"],
+.header__client__log__content input[type="password"]{
+  max-width: 70px;
 }
 .submit__btn {
-  
+  padding:3px;
 }
+.header__client__log__content{
+  padding: 2px;
+}
+.nav__menu__item {
+padding:0;
+}
+}
+
+@media(max-width:479.98px){
+  body{
+    font-size: 11px;
+  }
+  .header__logo {
+    grid-column: 1/2;
+  }
+  .header__title{
+    grid-column: 2/6;
+  }
+  .title{
+    font-size: 1.9em;
+  }
+  .header__subtitle{
+    font-size: 1.4em;
+  }
+  .nav {
+    grid-column: 13/19;
+  }
+  .header__login__form {
+    grid-column: 6/13;
+  }
+  .header__client__log__content input[type="email"],
+.header__client__log__content input[type="password"]{
+  max-width: 70px;
+}
+.submit__btn {
+  padding:3px;
+}
+.header__client__log__content{
+  padding: 2px;
+}
+.nav__menu__item {
+font-size: 0.9em;
+}
+} 
+
+/*______________________________________________*/
+
+
+
 
 
 
@@ -235,7 +343,7 @@ section{
 
 .find__travel__background{
   grid-column: 1/-1;
-  grid-row: 4/22;
+  grid-row: 1/19;
   top: 0;
   left: 0;
   position: relative;
@@ -245,11 +353,31 @@ section{
 }
 
 
+/*PC*/
+@media (max-width:1470px){
+  
+}
+@media (max-width:1087px){
+  
+}
+/*tablet*/
+ @media (max-width:991.98px){
+
+  
+}
+/*mobile*/
+@media (max-width:767.98px){
+  
+}
+/*mobile__small*/
+@media(max-width:479.98px){
+ 
+}
+
+
 .find__travel {
   grid-column: 1/-1;
-  grid-row: 4/22;
-  border-top:10px solid rgba(0,0,0,1);
-  border-bottom:10px solid rgba(0,0,0,1);
+  grid-row: 1/19;
   transition: all ease-in-out 1s;
 }
 .find__travel__content {
@@ -257,11 +385,11 @@ section{
   height: 100%;
 }
 .find__travel__title__box {
- padding: 0 50px;
+ padding: 50px;
   flex: 0 0 100%;
   display: flex;
   justify-content: center;
-  align-items:baseline;
+  align-items:center;
   flex-wrap: wrap;
   text-align: center;
   letter-spacing: 2px;
@@ -270,7 +398,7 @@ section{
 .find__travel__title{
   flex: 0 0 100%;
   position: relative;
-  font-size:9em;
+  font-size:6em;
   font-weight: 900;
   text-shadow:0 1px  1px rgba(0,0,0,1);
   padding: 20px;
@@ -278,49 +406,53 @@ section{
   text-transform: uppercase;
 }
 
-.find__travel__title::after,
+/* .find__travel__title::after,
 .find__travel__title::before{
   position: absolute;
   content:"";
   width: 7%;
-  height: 13px;
+  height: 5px;
   background-color:rgba(255,255,255,1);
   box-shadow: 0 1px 0 1px rgba(0,0,0,0.5);
   border-radius:50%
 }
 
 .find__travel__title::after{
-  top: 50%;
-  left: 22%;
+  top: 55%;
+  left: 10%;
 }
 
 .find__travel__title::before{
-  top: 50%;
-  right: 22%;
-}
+  top: 55%;
+  right: 10%;
+} */
 .find__travel__subtitle{
   font-weight: 900;
   text-transform: uppercase;
   flex: 0 0 100%;
  letter-spacing: 8px;
-  font-size:1.5em;
-  padding: 20px;
+  font-size:1em;
+  padding-top: 50px;
 }
 .find__travel__slogan {
   font-weight: 900;
   flex: 1 1 auto;
   font-family: "Open sans";
   flex: 0 0 100%;
-  font-size: 4.5em;
+  font-size: 3em;
   letter-spacing: 8px;
   text-align: center;
+  padding: 80px 50px;
+  padding-bottom: 0;
 }
 .find__travel__link{
   flex: 1 1 auto;
-  max-width: 70%  ;
+  max-width: 30%;
   text-align: center;
   font-weight: 900;
-font-size: 0.9rem;
+  margin: 15% auto;
+font-size: 1.2rem;
+padding: 30px 0;
 letter-spacing: 5px;
 text-transform: uppercase;
 }
@@ -335,10 +467,10 @@ text-transform: uppercase;
 
 
 .achievments {
-  grid-column: 4/-4;
-  grid-row:22/28;
+  grid-column: 5/-5;
+  grid-row:19/25;
   border:1px solid rgba(0,0,0,0.2);
-
+  background-color:rgba(255,255,255,0.2);
 }
 .achievments__content {
 }
@@ -350,7 +482,26 @@ text-transform: uppercase;
 }
 
 
-
+.section {
+}
+.travel__ways {
+  grid-column: 1/-1;
+  grid-row: 25/40;
+  border:1px solid rgba(0,0,0,0.2);
+  background-color:rgba(0,0,0,0.2);
+}
+.travel__ways__content {
+}
+.travel__ways__list {
+}
+.travel__way__item {
+}
+.travel__way {
+}
+.travel__way__descr {
+}
+.travel__way__title {
+}
 
 
 
