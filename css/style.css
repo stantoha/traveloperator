@@ -386,7 +386,7 @@ section{
 
 .find__travel {
   grid-column: 1/-1;
-  grid-row: 3/22;
+  grid-row: 1/19;
   border:1px solid rgba(0,0,0,0.2);
   transition: all ease-in-out 1s;
 }
@@ -416,7 +416,7 @@ section{
   padding: 20px;
   letter-spacing: 8px;
   text-transform: uppercase;
-  border:1px solid rgba(0,0,0,0.2);
+/*   border:1px solid rgba(0,0,0,0.2); */
 }
 
 /* .find__travel__title::after,
@@ -446,7 +446,7 @@ section{
  letter-spacing: 8px;
   font-size:1em;
   padding-top: 50px;
-  border:1px solid rgba(0,0,0,0.2);
+/*   border:1px solid rgba(0,0,0,0.2); */
 }
 .find__travel__slogan {
   font-weight: 900;
@@ -457,7 +457,7 @@ section{
   letter-spacing: 8px;
   text-align: center;
   padding: 80px 50px;
-  border:1px solid rgba(0,0,0,0.2);
+/*   border:1px solid rgba(0,0,0,0.2); */
   padding-bottom: 0;
 }
 .find__travel__link{
