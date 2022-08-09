@@ -51,48 +51,42 @@ body{
 .wrapper{
   position: relative;
     overflow: hidden;
-  min-height: 100%;
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items:center;
   margin: 0 auto;
- /*  background-color:rgba(0,0,0,0.6); */
 }
 
 .wrapper__container{
-  max-width: 1600px;
+  width: 100%;
   box-sizing:border-box;
   position: relative;
   display: grid;
   grid-template-columns: repeat(18,1fr);
   grid-template-rows: repeat(50,25px);
   gap: 15px;
-/*   background-color:rgb(188, 240, 255); */
 }
 
 
 
-[class*="__content"]{
+/* [class*="__content"]{
   display: flex;
   flex-wrap: wrap;
   align-items:center;
   margin: 0 auto;
-}
+} */
 
 
   .header{
-    max-width: 1600px;
+    width:100%;
     grid-column: 1/-1;
-    grid-row: 1/3;
+    height:80px ;
     position: fixed;
     margin: 0 auto;
-    width: 100%;
   display: grid;
   grid-template-columns: repeat(18,1fr);
-  grid-template-rows: repeat(2,36px);
-  column-gap: 15px;
-  border:1px solid rgba(0,0,0,1);
+  grid-template-rows: repeat(2,40px);
   background-color:rgba(0,0,0,0.4);
   z-index: 500;
   color:rgba(255,255,255,1);
@@ -103,14 +97,16 @@ body{
 .header__logo {
   grid-column: 2/3;
   grid-row: 1/3;
-  padding: 2px;
+  padding: 4px;
+  margin: 0 auto;
+  text-align: center;
   border:1px solid rgba(0,0,0,1);
 }
 img.header__logo__icon {
-  max-width: 1fr;
-  height: 55px;
-  margin: 0 auto;
-
+  max-width: 70px;
+  height: 70px;
+  border:1px solid rgba(0,0,0,1);
+  
 }
 
 /* header-title */
@@ -120,55 +116,49 @@ img.header__logo__icon {
   grid-column: 3/8;
   grid-row: 1/3;  
   border:1px solid rgba(0,0,0,1);
-
-}
-.header__title__content{
-  
-}
-.title {
-  flex: 1 1 100%;
-  display: flex;
-  flex-direction: column;
-  align-content:space-around;
-  font-size: 2em;
-  text-align: center;
-  padding: 5px;
-}
-.title__link {
   color:rgba(255,255,255,1);
-  font-family: "Open sans";
+  padding: 5px;
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  align-items:center
+}
 
+.title {
+  font-size: 2em;
+  font-family: "Open sans";
   letter-spacing: 15px;
-  font-weight: 700;
+  font-weight: 400;
   flex: 1 1 100%;
   letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
 }
 .header__subtitle {
   font-family: "Open Sauce";
   font-size: 1.6em;
   text-align: center;
-  flex: 1 1 100%;
+  
 }
 
 
 /* header-nav */
 
-.nav {
-  grid-column: 8/13;
+.header__nav {
+  grid-column: 13/18;
   grid-row: 1/3;
   border:1px solid rgba(0,0,0,1);
-}
-
-nav.nav{
-  border:1px solid rgba(0,0,0,1);
-}
-
-.nav__content {
-  height: 65px;
-  justify-content: center;
   padding: 10px;
+}
+
+
+.nav__menu{
+  height: 60px;
+  display: flex;
+  align-items:center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 }
 .nav__menu__item {
   margin: 0 3px;
@@ -183,9 +173,10 @@ nav.nav{
 /* header-form*/
 
 .header__login__form {
-  grid-column: 13/-2;
+  grid-column: 10/13;
   grid-row: 1/3;
   border:1px solid rgba(0,0,0,1);
+  text-align: center;
 }
 .header__client__log__content{
 align-items:center;
@@ -212,15 +203,16 @@ justify-content: space-around;
 }
 .btn {
   font-size: 0.7em;
-  border-radius:20px/20px;
+  letter-spacing: 1px;
   text-decoration: none;
   text-transform: uppercase;
-  color:rgba(255,255,255,1);
-  background-color:rgb(253, 251, 130);
+  color:rgba(0,0,0,1);
+  border:2px solid rgba(0,0,0,1);
+  border-radius:7px/7px;
+  padding: 5px;
+  text-align: center;
 }
-.submit__btn {
-  padding: 7px;
-}
+
 
 /*______________________________________________*/
 
@@ -241,11 +233,11 @@ justify-content: space-around;
   .header__title{
     grid-column: 2/7;
   }
-  .nav {
-    grid-column: 13/19;
-  }
   .header__login__form {
     grid-column: 7/13;
+  }
+  .header__nav{
+    grid-column: 13/-1;
   }
   .header__client__log__content input[type="email"],
 .header__client__log__content input[type="password"]{
@@ -266,11 +258,11 @@ justify-content: space-around;
   .header__title{
     grid-column: 2/6;
   }
-  .nav {
-    grid-column: 13/19;
-  }
   .header__login__form {
     grid-column: 6/13;
+  }
+  .header__nav{
+    grid-column: 13/-1;
   }
   .header__client__log__content input[type="email"],
 .header__client__log__content input[type="password"]{
@@ -303,11 +295,11 @@ padding:0;
   .header__subtitle{
     font-size: 1.4em;
   }
-  .nav {
-    grid-column: 13/19;
-  }
   .header__login__form {
     grid-column: 6/13;
+  }
+  .header__nav{
+    grid-column: 13/-1;
   }
   .header__client__log__content input[type="email"],
 .header__client__log__content input[type="password"]{
@@ -351,7 +343,7 @@ section{
 
 .find__travel__background{
   grid-column: 1/-1;
-  grid-row: 1/19;
+  grid-row: 1/24;
   border:1px solid rgba(0,0,0,0.2);
   top: 0;
   left: 0;
@@ -359,7 +351,60 @@ section{
   z-index: 5;
   width: 100%;
   height: 100%;
+  transition: all ease-in-out 0.3s;
 }
+
+
+.find__travel {
+  grid-column: 1/-1;
+  grid-row: 1/24;
+  transition: all ease-in-out 0.3s;
+  display: grid;
+  grid-template-columns: repeat(18,1fr);
+  grid-template-rows: repeat(24,25px);
+  gap: 15px;
+  color:rgba(255,255,255,1);
+}
+
+.find__travel .find__travel__subtitle{
+  grid-column: 3/-3;
+  grid-row: 5/6;
+  font-weight: 700;
+  font-family: "Open sans";
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  text-shadow:0 2px  1px rgba(0,0,0,0.7);
+  text-align: center;
+}
+.find__travel__title{
+  grid-column: 3/-3;
+  grid-row: 6/9;
+  font-size:7em;
+  font-weight: 900;
+  text-shadow:0 2px  1px rgba(0,0,0,0.7);
+  letter-spacing: 8px;
+  text-align: center;
+  text-transform: uppercase;
+  
+}
+.find__travel__slogan {
+  grid-column: 3/-3;
+  grid-row:15/15;
+  font-weight: 900;
+  font-family: "Open sans";
+  font-size: 3em;
+  letter-spacing: 5px;
+  text-shadow:0 2px  1px rgba(0,0,0,0.7);
+  text-align: center;
+}
+
+
+.find__travel .btn {
+  grid-column:8/12 ;
+  grid-row:17/18 ;
+}
+
+
 
 
 /*PC*/
@@ -384,106 +429,12 @@ section{
 }
 
 
-.find__travel {
-  grid-column: 1/-1;
-  grid-row: 1/19;
-  border:1px solid rgba(0,0,0,0.2);
-  transition: all ease-in-out 1s;
-}
-.find__travel__content {
-  color:rgba(255,255,255,1);
-  height: 100%;
-  border:1px solid rgba(0,0,0,0.2);
-}
-.find__travel__title__box {
- padding: 50px;
-  flex: 0 0 100%;
-  display: flex;
-  justify-content: center;
-  align-items:center;
-  flex-wrap: wrap;
-  text-align: center;
-  letter-spacing: 2px;
-  margin:  0 auto 15% auto;
-  border:1px solid rgba(0,0,0,0.2);
-}
-.find__travel__title{
-  flex: 0 0 100%;
-  position: relative;
-  font-size:6em;
-  font-weight: 900;
-  text-shadow:0 1px  1px rgba(0,0,0,0.2);
-  padding: 20px;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-/*   border:1px solid rgba(0,0,0,0.2); */
-}
-
-/* .find__travel__title::after,
-.find__travel__title::before{
-  position: absolute;
-  content:"";
-  width: 7%;
-  height: 5px;
-  background-color:rgba(255,255,255,1);
-  box-shadow: 0 1px 0 1px rgba(0,0,0,0.5);
-  border-radius:50%
-}
-
-.find__travel__title::after{
-  top: 55%;
-  left: 10%;
-}
-
-.find__travel__title::before{
-  top: 55%;
-  right: 10%;
-} */
-.find__travel__subtitle{
-  font-weight: 900;
-  text-transform: uppercase;
-  flex: 1 1 auto;
- letter-spacing: 8px;
-  font-size:1em;
-  padding-top: 50px;
-/*   border:1px solid rgba(0,0,0,0.2); */
-}
-.find__travel__slogan {
-  font-weight: 900;
-  flex: 1 1 auto;
-  font-family: "Open sans";
-  flex: 0 0 100%;
-  font-size: 3em;
-  letter-spacing: 8px;
-  text-align: center;
-  padding: 80px 50px;
-/*   border:1px solid rgba(0,0,0,0.2); */
-  padding-bottom: 0;
-}
-.find__travel__link{
-  flex: 1 1 auto;
-  max-width: 20%;
-  text-align: center;
-  font-weight: 900;
-  margin: 15% auto;
-font-size: 1.2rem;
-padding: 30px 0;
-letter-spacing: 5px;
-text-transform: uppercase;
-}
-
-.btn {
-}
-
-
-
-
 /* achievments */
 
 
 .achievments {
   grid-column: 5/-5;
-  grid-row:19/25;
+  grid-row:24/30;
   border:1px solid rgba(0,0,0,0.2);
   background-color:rgba(255,255,255,0.2);
 }
@@ -501,7 +452,7 @@ text-transform: uppercase;
 }
 .travel__ways {
   grid-column: 1/-1;
-  grid-row: 25/40;
+  grid-row: 30/40;
   border:1px solid rgba(0,0,0,0.2);
   background-color:rgba(0,0,0,0.2);
 }
