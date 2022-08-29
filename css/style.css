@@ -349,6 +349,7 @@ font-size: 0.9em;
 }
 
 
+/*________________________________________________*/
 
 
 .main{
@@ -357,6 +358,7 @@ font-size: 0.9em;
 }
 .main__content{
   width: 100%;
+  background-color:rgba(255,255,255,0.2);
   box-sizing:border-box;
   position: relative;
   display: grid;
@@ -371,17 +373,20 @@ font-size: 0.9em;
 section{
   position: relative;
   z-index: 100;
-transform: translateX(400%);
+/* transform: translateX(400%); */
 transition: transform 0.5s ease;
 }
 
 .section:nth-of-type(even){
-transform: translateX(-400%);
+/* transform: translateX(-400%); */
 }
 
 .section.shown{
 transform: translateX(0);
 }
+
+/*________________________________________________*/
+
 
 .find__travel__background{
   grid-column: 1/-1;
@@ -406,6 +411,8 @@ transform: translateX(0);
   grid-template-rows: repeat(24,20px);
   gap: 10px;
   color:rgba(255,255,255,1);
+  background-color:rgba(255,255,255,0.2);
+
 }
 
 .find__travel .find__travel__subtitle{
@@ -416,6 +423,7 @@ transform: translateX(0);
   font-size: 1.5em;
   letter-spacing: 2px;
   text-shadow:0 2px  1px rgba(0,0,0,0.7);
+
   text-align: center;
 }
 .find__travel__title{
@@ -474,6 +482,7 @@ transform: translateX(0);
  
 }
 
+/*________________________________________________*/
 
 /* achievments */
 
@@ -511,9 +520,6 @@ transform: translateX(0);
 
 }
 
-
-
-
 /*PC*/
 @media (max-width:1470px){
   
@@ -545,6 +551,7 @@ transform: translateX(0);
 }
 
 /*________________________________________________*/
+
 
 .travel__ways {
   grid-column: 1/-1;
@@ -614,6 +621,199 @@ transform: translateX(0);
 
 .booking__step .btn{
   font-size: 1.5em;
+}
+
+
+
+
+
+/*________________________________________________*/
+
+
+
+
+
+
+
+.main__content {
+}
+.section {
+}
+.countries {
+    grid-column: 1/-1;
+    grid-row:auto;
+    transition: all ease-in-out 0.3s;
+    margin: 100px auto;
+}
+
+.country__info {
+
+  display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    border:1px solid rgba(0,0,0,0.2);
+    margin: 0 auto;
+}
+.country__name {
+  font-size: 2em;
+  border:1px solid rgba(0,0,0,0.2);
+}
+.country__title__image {
+  max-width: 600px;
+  height: auto;
+  border:1px solid rgba(0,0,0,0.2);
+}
+.country__basic__info {
+  border:1px solid rgba(0,0,0,0.2);
+}
+.places__of__interest {
+  border:1px solid rgba(0,0,0,0.2);
+}
+.place__of__interest {
+  border:1px solid rgba(0,0,0,0.2);
+}
+
+.short__history {
+}
+.souvenirs__list {
+}
+.souvenir {
+}
+.our__tours__list {
+}
+.our__tour__item {
+}
+.our__tour__item__link {
+}
+
+.countries__cards__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+
+}
+.countries__cards__list__title {
+    flex: 0 1 100%;
+    font-size: 2em;
+    text-align: center;
+    padding: 30px;
+}
+.countries__cards__list__item {
+  flex: 0 1 300px;
+  padding: 10px;
+  text-align: center;
+  border:1px solid rgba(0,0,0,0.2);
+  margin: 10px 5px;
+  height: 300px;          
+}
+.country__card__name {
+  padding: 10px;
+  font-size: 1.5em;
+}
+.country__card__title__image {
+  width: 200px;
+  height: 200px;
+}
+
+
+
+.tour__card {
+  grid-column: 1/19;
+  grid-row: 1/101;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(18,1fr);
+  grid-template-rows: repeat(100,20px);
+  gap: 20px;
+}
+.tour__card__title {
+  grid-column: 5/-5;
+  grid-row: 4/5;
+  text-align: center;
+}
+.tour__name {
+  font-size: 2em;
+}
+.tour__duration {
+}
+.tour__basic__details {
+  grid-column: 5/-5;
+  grid-row: 6/9;
+  display: flex;
+  flex-wrap: wrap;
+  align-items:center;
+}
+.type,
+.countries__visited ,
+.route {
+  flex: 0 1 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items:center;
+}
+.route__point__title {
+}
+.route__point {
+}
+.countries__visited {
+ 
+}
+.countries__visited__title {
+  
+}
+.countries__visited__item {
+}
+.type {
+}
+.date {
+}
+.tour__description {
+  grid-column:2/18;
+  grid-row: 9/28;
+  display: block;
+  text-align: center;
+  border:1px solid rgba(0,0,0,0.2);
+
+}
+.content__image {
+  max-width: 1200px;
+  margin:20px auto;
+}
+.tour__descr {
+  padding: 20px;
+}
+.tour__descr__title {
+  font-size: 1.5em;
+}
+.tour__descr__text {
+  padding: 20px;
+  text-align: justify;
+}
+.tour__not__included,
+.tour__included {
+  grid-column:3/10;
+  grid-row: 29/34;
+  display: flex;
+  align-items:center;
+  flex-wrap: wrap;
+  border:1px solid rgba(0,0,0,0.2);
+}
+
+.tour__not__included {
+  grid-column:10/17;
+}
+ 
+.tour__not__included__title,
+.tour__included__title {
+  flex: 0 1 100%;
+  text-align: center;
+  font-size: 1.5em;
+}
+.tour__not__included__item,
+.tour__included__item {
+  flex: 0 1 100%;
+  margin-left: 30px;
+  list-style: circle;
 }
 
 
