@@ -1,4 +1,4 @@
-/* window.addEventListener("DOMContentLoaded", () => { */
+window.addEventListener("DOMContentLoaded", () => {
   let sections = document.querySelectorAll(".section"),
     headerHalfs = document.querySelectorAll(".header__half"),
     header = document.querySelector(".header"),
@@ -35,7 +35,7 @@
       "24",
     ];
     
-    /* function findTravelChangeBG() {
+    function findTravelChangeBG() {
       findTravelBox.forEach((item, i) => {
         let timerId = setTimeout(function log() {
           if (document.documentElement.clientWidth > 991) {
@@ -45,11 +45,11 @@
             if (i < findTravelBoxBackgrounds.length - 1 || i === 0) {
               i++;
               console.log(i);
-              timerId = setTimeout(log, 10000);
+              timerId = setTimeout(log, 30000);
             } else if (i == findTravelBoxBackgrounds.length - 1) {
               i = 0;
               console.log(i);
-              timerId = setTimeout(log, 10000);
+              timerId = setTimeout(log, 30000);
             }
           } else if (
             document.documentElement.clientWidth < 991 &&
@@ -60,17 +60,17 @@
                   background-size:cover;`;
             if (i < findTravelBoxBackgroundsVertical.length - 1 || i === 0) {
               i++;
-              timerId = setTimeout(log, 10000);
+              timerId = setTimeout(log, 30000);
             } else if (i == findTravelBoxBackgroundsVertical.length - 1) {
               i = 0;
-              timerId = setTimeout(log, 10000);
+              timerId = setTimeout(log, 30000);
             }
           }
         }, 100);
       });
     }
   
-    findTravelChangeBG(); */
+    findTravelChangeBG();
     
   
     window.addEventListener("scroll", checkHeaderHalfs);
@@ -115,7 +115,7 @@
   hideTabContent();
   showTabContent();
 
- /*  window.addEventListener("scroll", checkSections);
+  window.addEventListener("scroll", checkSections);
   
   checkSections();
 
@@ -131,7 +131,7 @@
         section.classList.remove("shown");
       }
     });
-  } */
+  }
 
 
     let countriesList = document.querySelector(".countries__cards__list"),
@@ -145,10 +145,10 @@
         item.classList.remove("show", "fade");
       });
     }
-   /*  function showCountriesTabs(j) {
+    function showCountriesTabs(j) {
         countriesTabs[j].classList.remove("hide");
         countriesTabs[j].classList.add("show", "fade");
-    } */
+    }
 
     navMenu.addEventListener("click", (event) => {
       let target = event.target;
@@ -185,7 +185,7 @@
 
     console.log(countriesTabs);
 
- /*  }); */
+  });
 
 
 

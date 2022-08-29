@@ -373,12 +373,12 @@ font-size: 0.9em;
 section{
   position: relative;
   z-index: 100;
-/* transform: translateX(400%); */
+transform: translateX(400%);
 transition: transform 0.5s ease;
 }
 
 .section:nth-of-type(even){
-/* transform: translateX(-400%); */
+transform: translateX(-400%);
 }
 
 .section.shown{
@@ -726,17 +726,17 @@ transform: translateX(0);
   grid-template-rows: repeat(100,20px);
   gap: 20px;
 }
-.tour__card__title {
+.card__title {
   grid-column: 5/-5;
   grid-row: 4/5;
   text-align: center;
 }
-.tour__name {
+.name {
   font-size: 2em;
 }
-.tour__duration {
+.duration {
 }
-.tour__basic__details {
+.basic__details {
   grid-column: 5/-5;
   grid-row: 6/9;
   display: flex;
@@ -767,7 +767,7 @@ transform: translateX(0);
 }
 .date {
 }
-.tour__description {
+.description {
   grid-column:2/18;
   grid-row: 9/28;
   display: block;
@@ -779,40 +779,42 @@ transform: translateX(0);
   max-width: 1200px;
   margin:20px auto;
 }
-.tour__descr {
+.descr {
   padding: 20px;
 }
-.tour__descr__title {
+.descr__title {
   font-size: 1.5em;
 }
-.tour__descr__text {
+.descr__text {
   padding: 20px;
   text-align: justify;
 }
-.tour__not__included,
-.tour__included {
+.not__included,
+.included {
   grid-column:3/10;
   grid-row: 29/34;
   display: flex;
   align-items:center;
   flex-wrap: wrap;
   border:1px solid rgba(0,0,0,0.2);
+  padding: 10px;
 }
 
-.tour__not__included {
+.not__included {
   grid-column:10/17;
 }
  
-.tour__not__included__title,
-.tour__included__title {
-  flex: 0 1 100%;
+.not__included__title,
+.included__title {
+  flex:1 1 100%;
   text-align: center;
   font-size: 1.5em;
+  padding: 5px;
 }
-.tour__not__included__item,
-.tour__included__item {
-  flex: 0 1 100%;
-  margin-left: 30px;
+.not__included__item,
+.included__item {
+  flex:1 1 100%;
+  margin-left: 10%;
   list-style: circle;
 }
 
