@@ -6,2653 +6,428 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75,300&family=Ubuntu:wght@300&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>travel__agency</title>
+    <title>travel__operator</title>
   </head>
 
   <body>
-    <div class="wrapper">
-      <div class="wrapper__container">
-        <header class="header">
+      <div class="container wrapper">
+         <header class="header row">
+          <div class="col-6 header__half">
+           <div class="container">
+            <div class="row">
+              <a href="" class="header__logo col-4">
+                <img
+                  src="img/travel-icon-white.png"
+                  alt=""
+                  class="header__logo__icon"
+                />
+              </a>
 
-          <div class="header__half">
-            <a href="" class="header__logo"> 
-              <img
-                src="img/travel-icon-white.png"
-                alt=""
-                class="header__logo__icon"
-              />
-            </a>
-           
-            <a class="header__title" href="">
-              <h1 class="title">
-                travel</h1> 
+              <a class="header__title col-8" href="#">
+                <h1 class="title">travel</h1>
                 <span class="header__subtitle">now</span>
-            </a>
-          </div>
-          <div class="header__half">
+              </a>
+            </div>
+           </div>
+                 
 
-            <form action="" class="header__login__form">
-              <div class="header__client__log__content">
-                <div class="client__log">
-                  <div class="client__mail">
-                    <label
-                      >email
-                      <input type="email" class="email" />
-                    </label>
-                  </div>
-                  <div class="client__pass">
-                     <label
-                      >password
-                      <input type="password" class="password" />
-                    </label>
-                  </div>
-                </div>
+          </div>
+          <div class="col-6 header__half">
+     
+            <div class="container">
+              <div class="row">
+                
+                <nav class="header__nav col-6">
+                  <!-- <input id="nav__toggle" type="checkbox" />
+                  <label class="nav__btn" for="nav__toggle">
+                    <span></span>
+                  </label> -->
+  
+                  <ul class="nav__menu">
+                    <li class="nav__menu__item">
+                      <a class="nav__menu__link active">about</a>
+                    </li>
+                    <li class="nav__menu__item">
+                      <a class="nav__menu__link">tours</a>
+                    </li>
+                    <li class="nav__menu__item">
+                      <a class="nav__menu__link">countries</a>
+                    </li>
+                    <li class="nav__menu__item">
+                      <a class="nav__menu__link">contacts</a>
+                    </li>
+                  </ul>
+                </nav>
+            
+                <form action="" class="header__login__form col-6">
+                             
+                  <input id="email" type="email" class="email" placeholder="email"/>
+                    
+                  <input id="password" type="password" class="password" placeholder="pass"/>
+                
+                  <input type="submit" value="Підтвердити"/>
+              </form>
+
+              </div>
+            </div>
+
+          </div>
+       </header>
+
+       <main class="main row">
+        <div class="main__content col">
+          <div class="container tour__select hide">
+            <form action="get" class="row tours__filter">
+              <div class="col-3 destination__select">
+                <p class="select__title">Destination</p>
+                <select class="select__destination" name="select__destination" id="select__destination">
+                  <option class="destination__item" value="All tours">All tours</option>
+                  <optgroup label="Europe">
+                    <option class="destination__item" value="France">France</option>
+                    <option class="destination__item" value="Germany">
+                      Germany
+                    </option>
+                    <option class="destination__item" value="Italy">Italy</option>
+                  </optgroup>
+                  <optgroup label="Asia">
+                    <option class="destination__item" value="Tailand">
+                      Tailand
+                    </option>
+                    <option class="destination__item" value="India">India</option>
+                  </optgroup>
+                  <optgroup label="North America">
+                    <option class="destination__item" value="USA">USA</option>
+                    <option class="destination__item" value="Mexica">Mexica</option>
+                    <option class="destination__item" value="Canada">Canada</option>
+                    <option class="destination__item" value="Dominicana">
+                      Dominicana
+                    </option>
+                  </optgroup>
+                  <optgroup label="Africa">
+                    <option class="destination__item" value="Marrocco">
+                      Marrocco
+                    </option>
+                    <option class="destination__item" value="Tunis">Tunis</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="col-3 duration__select">
+                <p class="select__title">Duration</p>
+                <select
+                  class="select__duration"
+                  name="select__duration"
+                  id="select__duration"
+                >
+                  <option value=""></option>
+                  <option class="duration__value" value="3">3</option>
+                  <option class="duration__value" value="4">4</option>
+                  <option class="duration__value" value="5">5</option>
+                  <option class="duration__value" value="6">6</option>
+                  <option class="duration__value" value="7">7</option>
+                  <option class="duration__value" value="8">8</option>
+                  <option class="duration__value" value="9">9</option>
+                  <option class="duration__value" value="10">10</option>
+                  <option class="duration__value" value="11">11</option>
+                  <option class="duration__value" value="12">12</option>
+                  <option class="duration__value" value="13">13</option>
+                  <option class="duration__value" value="14">14</option>
+                </select>
+              </div>
+              <div class="col-3 type__select">
+                <p class="select__title">Night crossing</p>
+                <select class="select__type" name="select__type" id="select__type">
+                  <option value=""></option>
+                  <option class="type__value" value="+">+</option>
+                  <option class="type__value" value="-">-</option>
+                </select>
+              </div>
+              <div class="col-3 price__select">
+                <label for="price" class="select__title">Price</label>
                 <input
-                  type="submit"
-                  class="btn submit__btn"
-                  value="Підтвердити"
+                  type="range"
+                  id="price"
+                  name="price"
+                  min="0"
+                  max="1000"
+                  step="1"
                 />
               </div>
             </form>
 
-            <nav class="header__nav">
-              <input id="nav__toggle" type="checkbox" />
-              <label class="nav__btn" for="nav__toggle">
-                <span></span>
-              </label>
-  
-              <ul class="nav__menu">
-                <li class="nav__menu__item">
-                  <a class="nav__menu__link active">about</a>
-                </li>
-                <li class="nav__menu__item">
-                  <a class="nav__menu__link">tours</a>
-                </li>
-                <!-- <li class="nav__menu__item">
-                  <a class="nav__menu__link">countries</a>
-                </li> -->
-                <li class="nav__menu__item">
-                  <a class="nav__menu__link">reviews</a>
-                </li>
-                <li class="nav__menu__item">
-                  <a class="nav__menu__link">contacts</a>
-                </li>
-              </ul>
-            </nav> 
-          </div>
-
-        </header>
-
-  <main class="main">
-
-    <div class="main__content">
-      <div class="find__travel__background"></div>
-
-      <section class="section find__travel">
-        
-              <span class="find__travel__subtitle">Ми покажемо тобі</span>
-              <h2 class="find__travel__title">
-              весь світ!</h2>
-  
-              <p class="find__travel__slogan">Пізнавай світ навколо та знайдеш всесвіт в собі</p>
-  
-            <a class="btn" href="" type="button">
-              Підібрати подорож
-            </a>
-          
-      </section>
-  
-      <section class="section achievments">
-        
-          <ul class="achievments__list">
-            <li class="achievments__list__title list__title">
-              <h3 class="achievment__title item__title">achievments list</h3>
-             </li>
-            <li class="achievment">
-              <h4 class="achievment__title item__title">achievment</h4>
-              <img src="" alt="" width="50" height="50" class="achievments__image" />
-            </li>
-            <li class="achievment">
-              <h4 class="achievment__title item__title">achievment</h4>
-              <img src="" alt="" width="50" height="50" class="achievments__image" />
-            </li>
-            <li class="achievment">
-              <h4 class="achievment__title item__title">achievment</h4>
-              <img src="" alt="" width="50" height="50" class="achievments__image" />
-            </li>
-            <li class="achievment">
-              <h4 class="achievment__title item__title">achievment</h4>
-              <img src="" alt="" width="50" height="50" class="achievments__image" />
-            </li>
-          </ul>
-      
-      </section>
-  
-      <section class="section travel__ways">
-        <div class="travel__ways__content">
-          <ul class="travel__ways__list">
-            <li class="travel__way__item">
-              <h3 class="travel__way__title item__title">Individual</h3>
-              <figure class="travel__way">
-                <figcaption class="travel__way__descr">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio est provident quod facilis laboriosam recusandae harum itaque,
-                  ducimus dolor doloremque officia incidunt perspiciatis eligendi adipisci, molestias earum, repudiandae eum atque!
-                </figcaption>
-              </figure>
-            </li>
-            <li class="travel__way__item">
-              <h3 class="travel__way__title item__title">Group</h3>
-              <figure class="travel__way">
-                <figcaption class="travel__way__descr">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                  Optio est provident quod facilis laboriosam recusandae harum itaque,
-                  ducimus dolor doloremque officia incidunt perspiciatis eligendi adipisci, molestias earum, repudiandae eum atque!
-                </figcaption>
-              </figure>
-            </li>
-          </ul>
-        </div>
-      </section>
-  
-      <section class="section booking__steps">
-        <ul class="booking__steps__list">
-          <li class="booking__step__list__title list__title">
-            <h3 class="booking__step__title item__title">Your perfect trip booking-plan</h3>
-          </li>
-          <li class="booking__step">
-            <h3 class="booking__step__title item__title">Step 1</h3>
-            <img src="" width="70" height="70" alt="">
-            <p class="booking__step__descr">Choose travel way You like</p>
-          </li>
-          <li class="booking__step">
-            <h3 class="booking__step__title item__title">Step 2</h3>
-            <img src="" width="70" height="70" alt="">
-            <p class="booking__step__descr">Work with our specialist to plan Your trip</p>
-            <a class="btn" href="">Contact our specialist</a>
-          </li>
-          <li class="booking__step">
-            <h3 class="booking__step__title item__title">Step 3</h3>
-            <img src="" width="70" height="70" alt="">
-            <p class="booking__step__descr">Enjoy Your perfect trip!</p>
-          </li>
-        </ul>
-      </section>
-    </div> 
-
-      <div class="main__content">
-
-        <div class="tour__card">
-          <div class="card__title">
-            <h3 class="name">Paris</h3>
-            <span class="duration">
-              (8 days)
-            </span>
-          </div>
-
-          <div class="basic__details">
-            <ul class="route">
-              <li class="route__point__title">
-                <h5>
-                  Cities along the route:
-                </h5>
+            <ul class="row tour__links__list">
+              <li class="col-12 tour__links__list__title section__title">
               </li>
-              <li class="route__point">
-                <a href="">
-                  Lviv
-                </a>-
+              <li class="col-2 tour__item" data-duration="6" data-destination="France">
+                <a href="#" class="tour__link">                  
+                    Paris
+                         </a>
               </li>
-              <li class="route__point">
-                <a href="">
-                  Krakow
-                </a>-
+              <li class="col-2 tour__item" data-duration="12" data-destination="France">
+                <a href="#" class="tour__link">        
+                    Bordeaux
+                        </a>
               </li>
-              <li class="route__point">
-                <a href="">
-                  Drezden
-                </a>-
+              <li class="col-2 tour__item" data-duration="9" data-destination="France">
+                <a href="#" class="tour__link">        
+                    Nice
+                        </a>
               </li>
-              <li class="route__point">
-                <a href="">
-                  Reims
-                </a>-
+              <li class="col-2 tour__item" data-duration="5" data-destination="Germany">
+                <a href="#" class="tour__link">                  
+                    Berlin
+                        </a>
               </li>
-              <li class="route__point">
-                <a href="">
-                  Paris
-                </a>-
+              <li class="col-2 tour__item" data-duration="11" data-destination="Germany">
+                <a href="#" class="tour__link">                  
+                    Munich
+                        </a>
               </li>
-              <li class="route__point">
-                <a href="">
-                  Frankfurt
-                </a>-
+              <li class="col-2 tour__item" data-duration="8" data-destination="Germany">
+                <a href="#" class="tour__link">                  
+                    Drezden
+                        </a>
               </li>
-              <li class="route__point">
-                <a href="">
-                  Wroclaw
-                </a>
+              <li class="col-2 tour__item" data-duration="12" data-destination="Germany">
+                <a href="#" class="tour__link">                  
+                    Hamburg
+                        </a>
               </li>
-
-            </ul> 
-            <ul class="countries__visited">
-              <li class="countries__visited__title">
-                <h5>
-                  Countries visited:
-                </h5>
+              <li class="col-2 tour__item" data-duration="10" data-destination="Italy">
+                <a href="#" class="tour__link">                  
+                    Rome
+                        </a>
               </li>
-                <li class="countries__visited__item">
-                  <a href="">
-                     Ukraine
-                  </a> ,
-                </li>
-                <li class="countries__visited__item">
-                  <a href="">
-                     Poland
-                  </a> ,
-                </li>
-                <li class="countries__visited__item">
-                  <a href="">
-                     Germany
-                  </a> ,
-                </li>
-                <li class="countries__visited__item">
-                  <a href="">
-                    France
-                  </a> 
-                </li>
-            </ul> 
-              <ul class="type">
-                <li class="type__title">
-                  <h5>
-                    Tour type:
-                  </h5>
-                </li>
-                  <li class="type__item">
-                    <a href="#">
-                      Sightseeing tour
-                    </a> ,
-                  </li>
-                  <li class="type__item">
-                    <a href="#">
-                      Bus tour
-                    </a>
-                  </li>
-              </ul>
-            <div class="date">
-              <select name="date__select" id="date__select">
-
-              </select>
-            </div>
-          </div>
-
-          <figure class="description">
-
-            <img src="img/paris1.jpg" alt="Eiffel" class="content__image">
-
-            <figcaption class="descr">
-              <h6 class="descr__title">
-                Tour Description
-              </h6>
-  
-              <p class="descr__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Dicta omnis magnam sunt ex beatae fugit nisi a minus, eos, fuga id placeat soluta sequi eius illo debitis qui non laboriosam!
-              </p>
-            </figcaption>
-          </figure>
-
-
-          <ul class="included">
-            <li class="included__title">
-              <h6>
-                Included:
-              </h6>
-            </li>
-            <li class="included__item">
-              7 nights in hotels 3*;
-            </li>
-            <li class="included__item">
-              BB (bed & breakfast);
-            </li>
-            <li class="included__item">
-              Transit along the route;
-            </li>
-            <li class="included__item">
-              Excursions according to the program;
-            </li>
-            <li class="included__item">
-              Accompanied by an enchanting guide;
-            </li>
-          </ul> 
-
-          <ul class="not__included">
-            <li class="not__included__title">
-              <h6>
-                Not included:
-              </h6>
-            </li>
-            <li class="not__included__item">
-              Transit to Lviv;
-            </li>
-            <li class="not__included__item">
-              Medical insurance;
-            </li>
-            <li class="not__included__item">
-              Entry tickets, extra paid excursions;
-            </li>
-            <li class="not__included__item">
-              City-TAX, radio-guide system;
-            </li>
-            <li class="not__included__item">
-              Single accomodation;
-            </li>
-          </ul> 
-          
-
-
-
-        </div>
-        
-
-      </div>
-
-      <!-- <div class="main__content">
-        <section class="section countries">
-        <div class="country__info">
-          <h4 class="country__name">Albania</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
+              <li class="col-2 tour__item" data-duration="9" data-destination="Italy">
+                <a href="#" class="tour__link">                  
+                    Venecia
+                        </a>
+              </li>
+              <li class="col-2 tour__item" data-duration="7" data-destination="Italy">
+                <a href="#" class="tour__link">        
+                    Firenze
+                        </a>
+              </li>
             </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item"><a href="" class="our__tour__item__link"></a></li>
-              <li class="our__tour__item"><a href="" class="our__tour__item__link"></a></li>
-              <li class="our__tour__item"><a href="" class="our__tour__item__link"></a></li>
-              <li class="our__tour__item"><a href="" class="our__tour__item__link"></a></li>
-              <li class="our__tour__item"><a href="" class="our__tour__item__link"></a></li>
-            </ol>
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Andorra</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Ausrtia</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Belarus</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Belgium</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="countries__cards__list">
-
-          <div class="countries__cards__list__title">
-            <h3>Countries</h3>
           </div>
           
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Albania</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Andorra</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Ausrtia</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Belarus</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Belgium</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
-      <div class="main__content"></div> -->
-
-  </main>
-
        
+        
+           <div class="container tour__card">
+            <section class="section row card__title">
+              <div class="col">
+                <h3 class="tour__name">Paris, my Love</h3>
+                <span class="tour__duration">6 days</span>
+              </div>
+            </section>
+            <section class="section row basic__info">
+              <ul class="col-12 route route__list">
+                <li class="route__point__title">Cities along the route:</li>
+                <li class="route__point">
+                  <a href="">Lviv</a>
+                </li>
+                <li class="route__point">
+                  <a href="">Krakow</a>
+                </li>
+                <li class="route__point">
+                  <a href="">Drezden</a>
+                </li>
+                <li class="route__point">
+                  <a href="">Reims</a>
+                </li>
+                <li class="route__point">
+                  <a href="">Paris</a>
+                </li>
+                <li class="route__point">
+                  <a href="">Frankfurt</a>
+                </li>
+                <li class="route__point">
+                  <a href="">Wroclaw</a>
+                </li>
+              </ul>
+              <ul class="col-12 countries__visited countries__visited__list">
+                <li class="countries__visited__title">Countries visited:</li>
+                <li class="countries__visited__item">
+                  <a href=""> Ukraine </a>
+                </li>
+                <li class="countries__visited__item">
+                  <a href=""> Poland </a>
+                </li>
+                <li class="countries__visited__item">
+                  <a href=""> Germany </a>
+                </li>
+                <li class="countries__visited__item">
+                  <a href=""> France </a>
+                </li>
+              </ul>
+              <ul class="col-12 type type__list">
+                <li class="type__title">Tour type:</li>
+                <li class="type__item">
+                  <a href="#"> Sightseeing tour </a>
+                </li>
+                <li class="type__item">
+                  <a href="#"> Bus tour </a>
+                </li>
+              </ul>
+            </section>
+            <section class="section row description__block">
+              <figure class="col-12 block__description">
+                <img src="img/paris1.jpg" alt="Eiffel" class="content__image"/>
+                <figcaption class="descr__content">
+                  <h6 class="descr__title section__title">Tour Description</h6>
+                  <p class="descr__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi cumque delectus quo, deleniti dolores exercitationem! A eligendi dolore similique inventore ipsum aut blanditiis maiores consequatur alias aspernatur ad, distinctio rem fugit ex accusamus necessitatibus commodi, corporis laborum! Tempore deleniti blanditiis, delectus eveniet tempora odio reprehenderit fuga excepturi beatae aperiam sunt a quas tenetur nesciunt, architecto possimus, dolor iure doloribus voluptatibus suscipit. Inventore officia eius saepe, sequi voluptatibus, repellendus aspernatur quia ducimus cum laborum id tempora quis voluptatem rerum deserunt nam eveniet reiciendis aut odio magni illum. Officia alias ipsam repellendus! Molestiae sit, aliquam minima fugiat expedita recusandae adipisci itaque vel!
+                  </p>
+                </figcaption>
+              </figure>
+            </section>
+            <div class="row">
+              <section class="section col-5 included">
+                <ul class=" included__list">
+                  <li>
+                    <h6 class="included__title section__title">Included:</h6>
+                  </li>
+                  <li class="included__item">7 nights in hotels 3*;</li>
+                  <li class="included__item">BB (bed & breakfast);</li>
+                  <li class="included__item">Transit along the route;</li>
+                  <li class="included__item">
+                    Excursions according to the program;
+                  </li>
+                  <li class="included__item">
+                    Accompanied by an enchanting guide;
+                  </li>
+                </ul>
+              </section>
+              <section class="section col-5 not__included">
+                <ul class=" not__included__list">
+                  <li>
+                    <h6  class="not__included__title section__title">Not included:</h6>
+                  </li>
+                  <li class="not__included__item">Transit to Lviv;</li>
+                  <li class="not__included__item">Medical insurance;</li>
+                  <li class="not__included__item">
+                    Entry tickets, extra paid excursions;
+                  </li>
+                  <li class="not__included__item">
+                    City-TAX, radio-guide system;
+                  </li>
+                  <li class="not__included__item">Single accomodation;</li>
+                </ul>
+              </section>
+            </div>
+            <section class="section row route__map">
+              <div class="col">
+                <h6 class="section__title">Route map</h6>
+                <iframe class="route__map" src="https://www.google.com/maps/embed?pb=!1m42!1m8!1m3!1d20977501.454712257!2d13.190949!3d50.072615!3m2!1i1024!2i768!4f13.1!4m31!3e0!4m5!1s0x473add7c06037793%3A0x46725ceccfb371ad!2zNzkwMDAsINCb0YzQstC-0LIsINCb0YzQstC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjA!3m2!1d49.839683!2d24.029716999999998!4m5!1s0x471644c0354e18d1%3A0xb46bb6b576478abf!2z0JrRgNCw0LrQvtCyLCDQn9C-0LvRjNGI0LA!3m2!1d50.064650099999994!2d19.9449799!4m5!1s0x4709cf29101ad6a9%3A0x421b1cb4288feb0!2z0JTRgNC10LfQtNC10L0sINCT0LXRgNC80LDQvdC40Y8!3m2!1d51.0504088!2d13.737262099999999!4m5!1s0x47e974334a533b09%3A0x1c0a5fbd0071a500!2zNTExMDAg0KDQtdC50LzRgSwg0KTRgNCw0L3RhtC40Y8!3m2!1d49.244275099999996!2d4.0346212!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2z0J_QsNGA0LjQtiwg0KTRgNCw0L3RhtC40Y8!3m2!1d48.856614!2d2.3522219!5e0!3m2!1suk!2sua!4v1662741295175!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              
+            </section>
+            <section class="section row tour__program">
+                <ul class="col tour__program__list">
+                  <li>
+                    <h6 class="tour__program__title section__title">Tour Program</h6>
+                  </li>
+                  <li class="tour__program__item">
+                    <span class="day__number">1 day</span>
+                    <p class="day__descr ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, tempore in? Recusandae laboriosam commodi voluptate ad nisi, assumenda dolorem dolorum.
+                       Quia tempore quidem eligendi in et sed dolore, adipisci quis aspernatur natus doloremque, quam,
+                       tenetur sit voluptatem repudiandae similique hic incidunt commodi nulla ea! Molestiae rerum nemo cumque provident natus, repellat odio dolore quas. 
+                      Consequatur praesentium tempora labore quam, consectetur modi pariatur commodi, totam laboriosam, repellat inventore tenetur aut. Iure!</p>
+                  </li>
+                  <li class="tour__program__item">
+                    <span class="day__number">2 day</span>
+                    <p class="day__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, tempore in? Recusandae laboriosam commodi voluptate ad nisi, assumenda dolorem dolorum.
+                       Quia tempore quidem eligendi in et sed dolore, adipisci quis aspernatur natus doloremque, quam,
+                       tenetur sit voluptatem repudiandae similique hic incidunt commodi nulla ea! Molestiae rerum nemo cumque provident natus, repellat odio dolore quas. 
+                      Consequatur praesentium tempora labore quam, consectetur modi pariatur commodi, totam laboriosam, repellat inventore tenetur aut. Iure!</p>
+                  </li>
+                  <li class="tour__program__item">
+                    <span class="day__number">3 day</span>
+                    <p class="day__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, tempore in? Recusandae laboriosam commodi voluptate ad nisi, assumenda dolorem dolorum.
+                       Quia tempore quidem eligendi in et sed dolore, adipisci quis aspernatur natus doloremque, quam,
+                       tenetur sit voluptatem repudiandae similique hic incidunt commodi nulla ea! Molestiae rerum nemo cumque provident natus, repellat odio dolore quas. 
+                      Consequatur praesentium tempora labore quam, consectetur modi pariatur commodi, totam laboriosam, repellat inventore tenetur aut. Iure!</p>
+                  </li>
+                  <li class="tour__program__item">
+                    <span class="day__number">4 day</span>
+                    <p class="day__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, tempore in? Recusandae laboriosam commodi voluptate ad nisi, assumenda dolorem dolorum.
+                       Quia tempore quidem eligendi in et sed dolore, adipisci quis aspernatur natus doloremque, quam,
+                       tenetur sit voluptatem repudiandae similique hic incidunt commodi nulla ea! Molestiae rerum nemo cumque provident natus, repellat odio dolore quas. 
+                      Consequatur praesentium tempora labore quam, consectetur modi pariatur commodi, totam laboriosam, repellat inventore tenetur aut. Iure!</p>
+                  </li>
+                  <li class="tour__program__item">
+                    <span class="day__number">5 day</span>
+                    <p class="day__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, tempore in? Recusandae laboriosam commodi voluptate ad nisi, assumenda dolorem dolorum.
+                       Quia tempore quidem eligendi in et sed dolore, adipisci quis aspernatur natus doloremque, quam,
+                       tenetur sit voluptatem repudiandae similique hic incidunt commodi nulla ea! Molestiae rerum nemo cumque provident natus, repellat odio dolore quas. 
+                      Consequatur praesentium tempora labore quam, consectetur modi pariatur commodi, totam laboriosam, repellat inventore tenetur aut. Iure!</p>
+                  </li>
+                  <li class="tour__program__item">
+                    <span class="day__number">6 day</span>
+                    <p class="day__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, tempore in? Recusandae laboriosam commodi voluptate ad nisi, assumenda dolorem dolorum.
+                       Quia tempore quidem eligendi in et sed dolore, adipisci quis aspernatur natus doloremque, quam,
+                       tenetur sit voluptatem repudiandae similique hic incidunt commodi nulla ea! Molestiae rerum nemo cumque provident natus, repellat odio dolore quas. 
+                      Consequatur praesentium tempora labore quam, consectetur modi pariatur commodi, totam laboriosam, repellat inventore tenetur aut. Iure!</p>
+                  </li>
+                  
+                </ul>
+            </section>
+            <section class="section row additional__info">
+            <ul class="col additional__info__list">
+              <li>
+                <h6 class="section__title">Additional information</h6>
+              </li>
+              <li class="children__discount">
+                <p>
+                  Discount for children under 12, travelling with 2
+                adults-30euro
+                </p>
+              </li>
+              <li class="join__group">
+                <p>It is possible to join group along the route:
+                  Krakow/Drezden/Paris/Frankfurt/Wroclaw.
+                </p>
+              </li>
+            </ul>
+            
+            </section>
+            <section class="section order__section row">
+              <form action="" class="order__form">
+                <input type="date" name="" id="">
+              <input type="submit" value="order" class="order__button"></form>
+            </section>
+            <section class="section row tour__reviews">
+              <ul class="reviews__list col">
+                <li class="review__item">
+                  <p class="client__name">Client</p>
+                  <span class="review__date">25/12/2013</span>
+                  <p class="review__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, esse tempora! Cumque voluptate eius quae eaque natus facere rerum, tenetur quia voluptas corporis. Rem, quaerat!
+                  </p>
+                </li>
+                <li class="review__item">
+                  <p class="client__name">Client</p>
+                  <span class="review__date">25/12/2013</span>
+                  <p class="review__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, esse tempora! Cumque voluptate eius quae eaque natus facere rerum, tenetur quia voluptas corporis. Rem, quaerat!
+                  </p>
+                </li>
+              </ul>
+            </section>
+            
+          </div>
+        </div>
+       </main>
       </div>
-    </div>
 
     <script src="script.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <div class="main__content">
-      <section class="section countries">
-
-        <div class="country__info">
-          <h4 class="country__name">Albania</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item"><a href="" class="our__tour__item__link"></a></li>
-              <li class="our__tour__item"><a href="" class="our__tour__item__link"></a></li>
-              <li class="our__tour__item"><a href="" class="our__tour__item__link"></a></li>
-              <li class="our__tour__item"><a href="" class="our__tour__item__link"></a></li>
-              <li class="our__tour__item"><a href="" class="our__tour__item__link"></a></li>
-            </ol>
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Andorra</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Ausrtia</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Belarus</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Belgium</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Bosnia and Herzegovina</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Bulgaria</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Croatia</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Czech Republic</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Denmark</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Estonia</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Finland</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">France</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Germany</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Hungary</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Italy</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Ireland</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Iceland</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Latvia</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Liechtenstein</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Lithuania</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Luxembourg</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Malta</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Moldova</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Monaco</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Montenegro</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Norway</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">North Macedonia</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Netherlands</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-          <div class="country__info">
-          <h4 class="country__name">Poland</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Portugal</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Romania</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">San Marino</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Serbia</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Slovakia</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Slovenia</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Spain</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Sweden</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Switzerland</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">Ukraine</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-        <div class="country__info">
-          <h4 class="country__name">United Kingdom</h4>
-          
-            <img src="" alt="" class="country__title__image">
-
-            
-          
-            
-            <p class="country__basic__info">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-            </p>
-
-            <ul class="places__of__interest">
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-              <li class="place__of__interest"></li>
-            </ul>
-
-            <p class="short__history">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-            </p>
-
-            <ol class="souvenirs__list">
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-              <li class="souvenir"></li>
-            </ol>
-
-            <ol class="our__tours__list">
-              <li class="our__tour__item">
-                <a href="" class="our__tour__item__link">
-
-                </a>
-              </li>
-            </ol>
-
-        </div>
-
-
-        <div class="countries__cards__list">
-
-          <div class="countries__cards__list__title">
-            <h3>Countries</h3>
-          </div>
-          
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Albania</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Andorra</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Ausrtia</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Belarus</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Belgium</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Bosnia and Herzegovina</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Bulgaria</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Croatia</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Czech Republic</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Denmark</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Estonia</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Finland</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">France</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Germany</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Hungary</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Italy</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Ireland</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Iceland</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Latvia</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Liechtenstein</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Lithuania</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Luxembourg</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Malta</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Moldova</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Monaco</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Montenegro</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Norway</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">North Macedonia</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Netherlands</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Poland</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Portugal</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Romania</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">San Marino</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Serbia</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Slovakia</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Slovenia</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Spain</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Sweden</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Switzerland</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">Ukraine</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-          <div class="countries__cards__list__item">
-            <h4 class="country__card__name">United Kingdom</h4>
-            <a href="" class="country__card__link">
-              <img src="" alt="" class="country__card__title__image">
-            </a>
-          </div>
-
-        </div>
-      </section>
-    </div> -->
-  <!--   <div class="main__content"></div>
-    <div class="main__content"></div> -->
-    
