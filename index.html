@@ -19,7 +19,7 @@
   </head>
 
   <body>
-      <div class="container wrapper">
+      <div class="container-fluid wrapper">
          <header class="header row">
           <div class="col-6 header__half">
            <div class="container">
@@ -84,8 +84,102 @@
        </header>
 
        <main class="main row">
-        <div class="main__content col">
-          <div class="container tour__select hide">
+        <div class="main__content col-12">
+
+          <div class="find__travel container-fluid">
+        
+            <h2 class="find__travel__title">
+              <small>We will show you</small>
+              whole world!
+            </h2>
+
+            <p class="find__travel__slogan">Пізнавай світ навколо та знайдеш всесвіт в собі</p>
+
+          <a class="btn" href="" type="button">
+            Find your trip!
+          </a>
+        
+         </div>
+          
+          <div class="achievments container-fluid">
+            <section class="section">
+              <ul class="achievments__list row">
+                <li class="achievments__list__title list__title">
+                  <h3 class="section__title">Our achievments</h3>
+                 </li>
+  
+                 <li class="achievment col-6 col-sm-3 mr-auto">
+                 
+                  <img src="" alt="" width="100" height="100" class="achievments__image w-75 mr-auto"/>
+                  <h4 class="achievment__name item__title">More than <strong>7500</strong> satisfied tourists</h4>
+                </li>
+                <li class="achievment col-6 col-sm-3 mr-auto">
+                  
+                  <img src="" alt="" width="100" height="100" class="achievments__image w-75 mr-auto"/>
+                  <h4 class="achievment__name item__title">Enriching lives through our trips for over <strong>7 years</strong></h4>
+                </li>
+                
+                <li class="achievment col-6 col-sm-3 mr-auto">
+                  
+                  <img src="" alt="" width="100" height="100" class="achievments__image w-75 mr-auto"/>
+                  <h4 class="achievment__name item__title">We are Ukraine <strong>most awarded</strong> tour-operator</h4>
+                </li>
+                
+              </ul>
+          </section>
+          </div>
+        
+          <div class="travel__ways container-fluid">
+           
+                <ul class="travel__ways__list row">
+                  <li class="travel__way__item section col-6">
+                    <h3 class="travel__way__title section__title">Individual</h3>
+                    <p class="descr__text">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                      Quis esse, eos vitae nisi at rerum quae harum molestiae est minus doloremque, 
+                      iusto iste, asperiores delectus quos. Minus obcaecati id aut! Odit ratione soluta aspernatur laboriosam?
+                    </p>
+                  </li>
+                  <li class="travel__way__item section col-6">
+                    <h3 class="travel__way__title section__title">Group</h3>
+                    <p class="descr__text">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                      Quis esse, eos vitae nisi at rerum quae harum molestiae est minus doloremque, 
+                      iusto iste, asperiores delectus quos. Minus obcaecati id aut! Odit ratione soluta aspernatur laboriosam?
+                    </p>
+                  </li>
+                </ul>
+          
+          </div>
+         
+          <div class="booking__steps container-fluid">
+            <ul class="booking__steps__list row">
+              <li class="booking__step__list__title col-12">
+                <h3 class="section__title">Your perfect trip booking-plan</h3>
+              </li>
+              <li class="booking__step col-4">
+                <h4 class="booking__step__title">Step 1</h4>
+                <img src="" width="70" height="70" alt="">
+                <p class="descr__text">Choose travel way You like</p>
+              </li>
+              <li class="booking__step col-4">
+                <h4 class="booking__step__title">Step 2</h4>
+                <img src="" width="70" height="70" alt="">
+                <p class="descr__text">Work with our specialist to plan Your trip</p>
+              </li>
+              <li class="booking__step col-4">
+                <h4 class="booking__step__title">Step 3</h4>
+                <img src="" width="70" height="70" alt="">
+                <p class="descr__text">Enjoy Your perfect trip!</p>
+              </li>
+              <li class="booking__consult__link col-12">
+                <a class="btn" href="">Contact our specialist</a>
+              </li>
+            </ul>
+          </div> 
+        </div>
+        <div class="main__content col-12">
+          <div class="tour__select container-fluid">
             <form action="get" class="row tours__filter">
               <div class="col-3 destination__select">
                 <p class="select__title">Destination</p>
@@ -93,6 +187,9 @@
                   <option class="destination__item" value="All tours">All tours</option>
                   <optgroup label="Europe">
                     <option class="destination__item" value="France">France</option>
+                    <option class="destination__item" value="Hungary">Hungary</option>
+                    <option class="destination__item" value="Czech">Czech</option>
+
                     <option class="destination__item" value="Germany">
                       Germany
                     </option>
@@ -163,65 +260,63 @@
               </div>
             </form>
 
-            <ul class="row tour__links__list">
+            <ul class=" tour__links__list row">
               <li class="col-12 tour__links__list__title section__title">
               </li>
-              <li class="col-2 tour__item" data-duration="6" data-destination="France">
-                <a href="#" class="tour__link">                  
+              <li class="col-3 tour__item" data-duration="6" data-destination="France">
+                <a href="#" class="tour__link">               
                     Paris
                          </a>
               </li>
-              <li class="col-2 tour__item" data-duration="12" data-destination="France">
+              <li class="col-3 tour__item" data-duration="12" data-destination="Hungary">
                 <a href="#" class="tour__link">        
-                    Bordeaux
+                    Budapest
                         </a>
               </li>
-              <li class="col-2 tour__item" data-duration="9" data-destination="France">
+              <li class="col-3 tour__item" data-duration="9" data-destination="Czech">
                 <a href="#" class="tour__link">        
-                    Nice
+                    Prague
                         </a>
               </li>
-              <li class="col-2 tour__item" data-duration="5" data-destination="Germany">
+              <li class="col-3 tour__item" data-duration="5" data-destination="Germany">
                 <a href="#" class="tour__link">                  
                     Berlin
                         </a>
               </li>
-              <li class="col-2 tour__item" data-duration="11" data-destination="Germany">
+              <li class="col-3 tour__item" data-duration="11" data-destination="Germany">
                 <a href="#" class="tour__link">                  
                     Munich
                         </a>
               </li>
-              <li class="col-2 tour__item" data-duration="8" data-destination="Germany">
+              <li class="col-3 tour__item" data-duration="8" data-destination="Germany">
                 <a href="#" class="tour__link">                  
                     Drezden
                         </a>
               </li>
-              <li class="col-2 tour__item" data-duration="12" data-destination="Germany">
+              <li class="col-3 tour__item" data-duration="12" data-destination="Germany">
                 <a href="#" class="tour__link">                  
                     Hamburg
                         </a>
               </li>
-              <li class="col-2 tour__item" data-duration="10" data-destination="Italy">
+              <li class="col-3 tour__item" data-duration="10" data-destination="Italy">
                 <a href="#" class="tour__link">                  
                     Rome
                         </a>
               </li>
-              <li class="col-2 tour__item" data-duration="9" data-destination="Italy">
+              <li class="col-3 tour__item" data-duration="9" data-destination="Italy">
                 <a href="#" class="tour__link">                  
                     Venecia
                         </a>
               </li>
-              <li class="col-2 tour__item" data-duration="7" data-destination="Italy">
+              <li class="col-3 tour__item" data-duration="7" data-destination="Italy">
                 <a href="#" class="tour__link">        
-                    Firenze
+                    Toscana
                         </a>
               </li>
             </ul>
           </div>
           
-       
-        
-           <div class="container tour__card">
+           <div class="tour__card container-fluid">
             <section class="section row card__title">
               <div class="col">
                 <h3 class="tour__name">Paris, my Love</h3>
@@ -284,7 +379,17 @@
                 <figcaption class="descr__content">
                   <h6 class="descr__title section__title">Tour Description</h6>
                   <p class="descr__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi cumque delectus quo, deleniti dolores exercitationem! A eligendi dolore similique inventore ipsum aut blanditiis maiores consequatur alias aspernatur ad, distinctio rem fugit ex accusamus necessitatibus commodi, corporis laborum! Tempore deleniti blanditiis, delectus eveniet tempora odio reprehenderit fuga excepturi beatae aperiam sunt a quas tenetur nesciunt, architecto possimus, dolor iure doloribus voluptatibus suscipit. Inventore officia eius saepe, sequi voluptatibus, repellendus aspernatur quia ducimus cum laborum id tempora quis voluptatem rerum deserunt nam eveniet reiciendis aut odio magni illum. Officia alias ipsam repellendus! Molestiae sit, aliquam minima fugiat expedita recusandae adipisci itaque vel!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae libero iure voluptate quo omnis eaque repudiandae asperiores harum nulla reprehenderit.
+                  </p>
+
+                  <p class="descr__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur distinctio labore mollitia, provident fugit eum suscipit magni nesciunt dicta a ducimus,
+                     perspiciatis aliquid, molestiae aperiam ratione corporis accusamus aspernatur porro.
+                     Quasi dolorum labore totam assumenda ducimus debitis, minus consequatur ex ab. Accusamus soluta nisi vitae.
+                  </p>
+
+                  <p class="descr__text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia eum nobis necessitatibus voluptatibus accusantium nemo architecto eveniet voluptate, ab distinctio ullam, ut asperiores tenetur. Consequuntur!
                   </p>
                 </figcaption>
               </figure>
@@ -341,13 +446,16 @@
                        Quia tempore quidem eligendi in et sed dolore, adipisci quis aspernatur natus doloremque, quam,
                        tenetur sit voluptatem repudiandae similique hic incidunt commodi nulla ea! Molestiae rerum nemo cumque provident natus, repellat odio dolore quas. 
                       Consequatur praesentium tempora labore quam, consectetur modi pariatur commodi, totam laboriosam, repellat inventore tenetur aut. Iure!</p>
+                      <img src="" alt="" class="descr__image">
                   </li>
                   <li class="tour__program__item">
                     <span class="day__number">2 day</span>
+                    <img src="" alt="" class="descr__image">
                     <p class="day__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, tempore in? Recusandae laboriosam commodi voluptate ad nisi, assumenda dolorem dolorum.
                        Quia tempore quidem eligendi in et sed dolore, adipisci quis aspernatur natus doloremque, quam,
                        tenetur sit voluptatem repudiandae similique hic incidunt commodi nulla ea! Molestiae rerum nemo cumque provident natus, repellat odio dolore quas. 
                       Consequatur praesentium tempora labore quam, consectetur modi pariatur commodi, totam laboriosam, repellat inventore tenetur aut. Iure!</p>
+                     
                   </li>
                   <li class="tour__program__item">
                     <span class="day__number">3 day</span>
@@ -355,13 +463,16 @@
                        Quia tempore quidem eligendi in et sed dolore, adipisci quis aspernatur natus doloremque, quam,
                        tenetur sit voluptatem repudiandae similique hic incidunt commodi nulla ea! Molestiae rerum nemo cumque provident natus, repellat odio dolore quas. 
                       Consequatur praesentium tempora labore quam, consectetur modi pariatur commodi, totam laboriosam, repellat inventore tenetur aut. Iure!</p>
+                      <img src="" alt="" class="descr__image">
                   </li>
                   <li class="tour__program__item">
                     <span class="day__number">4 day</span>
+                    <img src="" alt="" class="descr__image">
                     <p class="day__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, tempore in? Recusandae laboriosam commodi voluptate ad nisi, assumenda dolorem dolorum.
                        Quia tempore quidem eligendi in et sed dolore, adipisci quis aspernatur natus doloremque, quam,
                        tenetur sit voluptatem repudiandae similique hic incidunt commodi nulla ea! Molestiae rerum nemo cumque provident natus, repellat odio dolore quas. 
                       Consequatur praesentium tempora labore quam, consectetur modi pariatur commodi, totam laboriosam, repellat inventore tenetur aut. Iure!</p>
+                     
                   </li>
                   <li class="tour__program__item">
                     <span class="day__number">5 day</span>
@@ -369,13 +480,16 @@
                        Quia tempore quidem eligendi in et sed dolore, adipisci quis aspernatur natus doloremque, quam,
                        tenetur sit voluptatem repudiandae similique hic incidunt commodi nulla ea! Molestiae rerum nemo cumque provident natus, repellat odio dolore quas. 
                       Consequatur praesentium tempora labore quam, consectetur modi pariatur commodi, totam laboriosam, repellat inventore tenetur aut. Iure!</p>
+                      <img src="" alt="" class="descr__image">
                   </li>
                   <li class="tour__program__item">
                     <span class="day__number">6 day</span>
+                    <img src="" alt="" class="descr__image">
                     <p class="day__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, tempore in? Recusandae laboriosam commodi voluptate ad nisi, assumenda dolorem dolorum.
                        Quia tempore quidem eligendi in et sed dolore, adipisci quis aspernatur natus doloremque, quam,
                        tenetur sit voluptatem repudiandae similique hic incidunt commodi nulla ea! Molestiae rerum nemo cumque provident natus, repellat odio dolore quas. 
                       Consequatur praesentium tempora labore quam, consectetur modi pariatur commodi, totam laboriosam, repellat inventore tenetur aut. Iure!</p>
+                     
                   </li>
                   
                 </ul>
@@ -425,6 +539,9 @@
             
           </div>
         </div>
+
+        <div class="main__content col-12"></div>
+        <div class="main__content col-12"></div>
        </main>
       </div>
 
