@@ -21,8 +21,36 @@ window.addEventListener("DOMContentLoaded", () => {
         'India','USA','Mexica','Canada','Dominicana','Marrocco','Tunis'],
         toursDurations=['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16'],
         findTravel = document.querySelector(".find__travel"),
-        findTravelBackgrounds = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14",
-        "15","16","17","18","19","20","21","22","23","24"];
+        findTravelBackgrounds = [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+        ],
+        findTravelBackgroundsVertical = [
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+        ];
+       /*  findTravelBackgrounds = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14",
+        "15","16","17","18","19","20","21","22","23","24"]; */
 
         function hideItems(items){
           items.forEach(item=>{
@@ -74,6 +102,57 @@ window.addEventListener("DOMContentLoaded", () => {
           });
           
         }
+
+
+
+        function changeBackground(i,height){
+          findTravel.style.cssText=`background:url("img/bg${i}.png") no-repeat 100% 100%;
+          background-size:cover;
+          width:100%;
+          height:${height}vw;`;
+        }
+        
+        function changeBackgroundTimer(i){
+        
+           changeBackground(1,65);
+         
+           if(document.documentElement.clientWidth>860){
+            
+            let id=setTimeout(function log(){
+              if(i<findTravelBackgrounds.length){
+                i++;
+                console.log(i);
+                changeBackground(i,65);
+              }
+              else{
+                i=1;
+              }
+              id=setTimeout(log,10000);
+            
+            },10000);
+           }
+           else{
+            let id=setTimeout(function log(){
+              if(i<findTravelBackgroundsVertical.length){
+                i++;
+                console.log(i);
+                changeBackground(i,130);
+              }
+              else{
+                i=1;
+              }
+          
+              id=setTimeout(log,10000);
+            
+            },10000);
+           }
+
+        }
+        
+        changeBackgroundTimer(1);
+
+
+
         ////////////////////////////////
         //Section-slide
         window.addEventListener("scroll", checkSections);
@@ -96,7 +175,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
         tourItems.forEach((tourItem,i)=>{
             tourItem.style.cssText=`background: url("img/contentpic/${i}.jpg") no-repeat 50% 50%;
-            background-size:cover;`;
+            background-size:contain;`;
          });
 
 
@@ -138,51 +217,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
         });
 
-/* let timerId=setTimeout(function log(){
-  for(let i=0;i<findTravelBackgrounds.length;){
-    if(i<findTravelBackgrounds.length){
-      findTravel.style.cssText=`background:url("img/bg${findTravelBackgrounds[i]}.png") no-repeat;
-      background-size:cover;`;
-      i++;
-    }
-    else if(i==Number( findTravelBackgrounds.length)){
-     i=1;
-    }
-    setTimeout(timerId,3000);
-  }
-},3000); */
-
-
-function changeBackground(i){
-  findTravel.style.cssText=`background:url("img/bg${i}.png") no-repeat;
-  background-size:cover;`;
-}
-
-function changeBackgroundTimer(i){
-
-   changeBackground(i);
- 
-  let id=setTimeout(function log(){
-    if(i<findTravelBackgrounds.length){
-      i++;
-      console.log(i);
-      changeBackground(i);
-    }
-    else{
-      i=1;
-    }
-
-    id=setTimeout(log,10000);
-  
-  },10000);
-}
-
-changeBackgroundTimer(1);
 
 
 
 
-          
+
+
+
 
 
     
