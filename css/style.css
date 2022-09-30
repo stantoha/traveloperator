@@ -153,23 +153,30 @@ display: flex;
     text-align: center;
     height: 90px;
 }
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    min-width: 55%;
+}
 .header__login__form label{
     font-size: 0.8em;
 }
 .email,
 .password {
     flex: 0 0 100%;
-    height:20px;
+    max-height:15px;
 margin: 5px auto;
 text-align: center;
-max-width: 45%;
-}
+/* max-width: 45%;
+ */}
 input[type="submit"] {
     border:1px solid rgba(0,0,0,0.2);
     flex:1 1 auto;
-    height: 30px;
+    max-height: 20px;
     font-size: 0.8em;
-    max-width: 45%;
+    max-width: 25%;
     margin: 0 auto;
 }
 
@@ -226,48 +233,64 @@ input[type="submit"] {
 
 .main__content{
     z-index: 900;
-   /*  background-color:rgba(255,255,255,0.3); */
-   
 }
 
 
 .find__travel.container-fluid {
     display: flex;
-    flex-direction: column;
-    align-content: space-around;
+    align-content: space-between;
     align-items:center;
+    flex-direction: column;
     margin: 0 ;
     padding: 0;
-    padding-top: 150px;
+ /*    padding-top: 100px; */
     text-align: center;
     border:1px solid rgba(0,0,0,0.2);
+    max-height: 100vh;
 }
 .find__travel{
      width: 100%;
      color:rgba(255,255,255,1);
 }
 
+.find__travel__title{
+   /*  flex: 0 0 100%; */
+    margin: 10% auto;
+    text-align: center;
+}
+
 .find__travel__title span{
-    
-    font-size: 2em;
+   /*  flex: 0 0 100%; */
+    font-size: 1em;
     letter-spacing: 7px;
     text-shadow: 3px 0 3px rgba(0,0,0,1);
 }
 
 
-.find__travel__title p{
-    font-size: 4em;
+.find__travel__title {
+   /*  flex: 0 0 100%; */
+   text-align: center;
+   margin-top: 120px;
+    font-size: 2em;
     letter-spacing: 1px;
+    font-weight: 900;
     text-shadow: 3px 0 3px rgba(0,0,0,1);
 }
 .find__travel__slogan {
-    font-size: 3em;
+   /*  flex: 0 0 100%; */
+    max-width: 70%;
+    font-size: 2em;
     text-shadow: 3px 0 3px rgba(0,0,0,1);
     letter-spacing: 1px;
-    padding: 30px 0px;
+    padding:0px;
+    font-weight: 900;
 }
 .find__travel .btn {
-    font-size: 1.5em;
+   /*  flex: 0 0 100%; */ 
+    max-width:500px ;
+    font-size: 1em;
+    font-weight: 900;
+    letter-spacing: 2PX;
     margin: 10px auto;
     color:rgba(255,255,255,1);
     border:5px solid rgba(255, 88, 11,1);
@@ -275,6 +298,50 @@ input[type="submit"] {
     box-shadow:0 0 10px rgba(0,0,0,0.5);
 }
 
+
+.accent__title {
+    display: inline;
+    margin: 0 auto;
+}
+
+.second__word,
+.first__word {
+ /*    width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.first__word{
+    margin-right: 3%;
+}
+
+
+.second__word{
+    margin-left: 3%;
+}
+
+.symbol__item {
+    position: relative;
+    font-size: 5em;
+    font-style: italic;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    text-shadow: 3px 0 3px rgba(0,0,0,1);
+    margin: 0 auto;
+    transform:translateX(0) ;
+    transition: all 1s ease-in-out;
+}
+
+.slide__left{
+    transform: translateX(-400vw);
+}
+.slide__right{
+    transform: translateX(400vw);
+}
 /*______________________________________________*/
 
 /*ACHIEVMENTS */
@@ -443,7 +510,6 @@ letter-spacing: 5px;}
     font-size: 0.8em;
 }
 .route {
-    
  
 }
 .route__list,
@@ -618,6 +684,7 @@ letter-spacing: 5px;}
 .tour__select.container-fluid{
     margin: 0;
     padding: 0;
+    margin-top: 100px;
 }
 
 /*______________________________________________*/
@@ -707,24 +774,32 @@ option.destination__item {
     background-color:rgba(0,0,0,0.1);
   }
   .tour__item {
-min-height: 250px;   
-box-shadow:0 0 5px rgba(0,0,0,0.5);
+box-shadow:0 0 5px rgba(0,0,0,1 );
+border-radius:10px/10px;
 text-align: center;
+height: 200px;
+width: 200px;
+padding: 10px;
   }
   .tour__links__list__title{
 
   }
   .tour__link{
-   color:rgba(255,255,255,1);
-   flex:1 1 auto;
+
+   color:rgba(0,0,0,0.5);
    display: block;
    background-color:rgba(255,255,255,0.3);
    text-shadow: 0 0 2px rgba(0,0,0,0.5);
-   font-size: 1.5em;
+   font-size: 1em;
    letter-spacing: 2px;
    text-decoration: none;
    font-weight: 700;
-   padding: 10px;
+  }
+
+  .tour__link img{
+    height: 150px;
+    width: 150px;
+
   }
  
 

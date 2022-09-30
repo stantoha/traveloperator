@@ -8,10 +8,8 @@ window.addEventListener("DOMContentLoaded", () => {
         toursList=document.querySelector('.tour__links__list'),
         tourLinksListTitle=document.querySelector('.tour__links__list__title'),
         tourItems=document.querySelectorAll('.tour__item'),
-        tourLinksActive=document.querySelectorAll('.tour__link','.tour__link__active'),
-        tourCards=document.querySelectorAll('.tour__card'),
         destinationSelect=document.querySelector('.select__destination'),
-        destinations=document.querySelectorAll('.destination__item').values,
+        destinations=document.querySelectorAll('.destination__item'),
         durationSelect=document.querySelector('.select__duration'),
         typeSelect=document.querySelector('.select__type'),
         toursFilter=document.querySelector('.tours__filter'),
@@ -21,6 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
         'India','USA','Mexica','Canada','Dominicana','Marrocco','Tunis'],
         toursDurations=['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16'],
         findTravel = document.querySelector(".find__travel"),
+        symbolItems=document.querySelectorAll('.symbol__item'),
         findTravelBackgrounds = [
           "1",
           "2",
@@ -49,21 +48,80 @@ window.addEventListener("DOMContentLoaded", () => {
           "23",
           "24",
         ];
+
+
+ 
+
+        
+symbolItems.forEach((item,i)=>{
+  if(i%2===0){
+    item.classList.add('slide__left');
+  }
+  else{
+    item.classList.add('slide__right');
+  }
+  });
+
+        let showLetter=function(item){
+          item.classList.remove('slide__left');
+          item.classList.remove('slide__right');
+      };
+
+
+      function showLetters(){
+       
+      let i=0;
+         let letTimer= setTimeout(function timerLet(){
+          do{
+            showLetter(symbolItems[i]);
+            i++;
+            letTimer=setTimeout(timerLet,300);
+          }
+          while(i===symbolItems.length);
+          
+         } ,300);
+        
+      }
+      
+      showLetters();
+
+        /* symbolItems.forEach((item,i)=>{
+          setTimeout(showLetter(item),3000);
+        }); */
+    
        /*  findTravelBackgrounds = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14",
         "15","16","17","18","19","20","21","22","23","24"]; */
-
-        function hideItems(items){
+       let hideItem= function(items,i){
+          items[i].classList.add('hide');
+          items[i].classList.remove('show','fade');
+          return items[i];
+      };
+       let hideItems= function(items){
           items.forEach(item=>{
           item.classList.add('hide');
           item.classList.remove('show','fade');
+          return item;
           });
-      }
-      
-      function showItems(items,i){
+      };
+      let showItem= function(items,i){
+        items[i].classList.add('show','fade');
+        items[i].classList.remove('hide');
+        return items[i];
+    };
+     let showItems= function(items,i){
           items[i].classList.remove('hide');
           items[i].classList.add('show','fade');
-      }
-
+          return items[i];
+      };
+      
+    
+   let showAllItems= function(items){
+      items.forEach(item=>{
+        item.classList.remove('hide');
+        item.classList.add('show','fade');
+        return item;
+      });
+    };
         //Nav-menu
         hideItems(mainContents);
         showItems(mainContents,0);
@@ -113,11 +171,8 @@ window.addEventListener("DOMContentLoaded", () => {
         }
         
         function changeBackgroundTimer(i){
-        
            changeBackground(1,65);
-         
            if(document.documentElement.clientWidth>860){
-            
             let id=setTimeout(function log(){
               if(i<findTravelBackgrounds.length){
                 i++;
@@ -128,7 +183,6 @@ window.addEventListener("DOMContentLoaded", () => {
                 i=1;
               }
               id=setTimeout(log,10000);
-            
             },10000);
            }
            else{
@@ -141,14 +195,10 @@ window.addEventListener("DOMContentLoaded", () => {
               else{
                 i=1;
               }
-          
               id=setTimeout(log,10000);
-            
             },10000);
            }
-
         }
-        
         changeBackgroundTimer(1);
 
 
@@ -171,14 +221,179 @@ window.addEventListener("DOMContentLoaded", () => {
           });
         }
         ////////////////////////////////
-     
 
-        tourItems.forEach((tourItem,i)=>{
+      
+   
+
+
+
+        tourLinksListTitle.textContent=toursDestinations[0];
+
+
+    
+
+        let selectDestination=function(indexSel){
+          
+          tourLinksListTitle.textContent=destinations[indexSel].value;
+          
+          if(durationSelect.selectedIndex!==0){
+          
+          }
+          else{
+            tourItems.forEach((tourItem,i)=>{
+              if(indexSel===0){
+               showAllItems(tourItems);
+              }
+              else{
+                if(tourItem.dataset.destination==destinations[indexSel].value){
+                 showItems(tourItems,i);
+                 console.log(showItems(tourItems,i)); 
+                  tourLinksListTitle.textContent=destinations[indexSel].value;
+              }
+              }
+             });
+            
+          }
+          
+        };
+
+      
+
+ 
+        let selectDuration= function(indexSel){
+       
+          tourItems.forEach((tourItem,i)=>{
+            if(indexSel===0){
+              showAllItems(tourItems);
+            }
+            else if(tourItem.dataset.duration==indexSel){
+              showItems(tourItems,i);
+          }
+            return tourItems;
+          });
+     
+        };    
+        
+        
+
+        destinationSelect.addEventListener('change',(event)=>{
+          let target=event.target;
+          let indexSel=target.selectedIndex;
+          hideItems(tourItems);
+          /* selectDestination(indexSel); */
+          });
+
+        /*   durationSelect.addEventListener('change',(event)=>{
+            let target=event.target;
+            let indexSel=target.selectedIndex;
+            hideItems(tourItems);
+            selectDuration(indexSel);
+            }); */
+
+
+          let selectType=function(indexSel){
+            tourItems.forEach((tourItem,i)=>{
+              if(typeSelect[indexSel].value==='All'){
+                showAllItems(tourItems);
+              }
+              else if(tourItem.dataset.type==typeSelect[indexSel].value){
+                showItems(tourItems,i);
+              }
+            });
+          };
+
+        toursFilter.addEventListener('change',(event)=>{
+        let target=event.target;
+        let indexSel=target.selectedIndex;
+        hideItems(tourItems);
+        console.log(indexSel);
+          if(target==destinationSelect){
+        selectDestination(indexSel);
+          }
+        else if(target==durationSelect){
+            selectDuration(indexSel);
+          }
+          else if(target==typeSelect){
+            selectType(indexSel);
+          }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+/* 
+        hideItems(symbolItems);
+       
+        
+            symbolItems[i].classList.remove('hide');
+            symbolItems[i].classList.add('show'); */
+     
+        
+
+
+
+});
+        /* let tourLinksArray=[];
+        tourItems.forEach((item)=>{
+          tourLinksArray.push(item);
+        });
+        item.classList.remove('hide');
+          item.classList.add('show');
+
+       function selectDestination(){
+        let b =tourLinksArray.filter(item=>{
+          item.dataset.destination='France';
+        });
+
+        console.log(b);
+      }
+       
+       toursFilter.addEventListener('change',(event)=>{
+ let target=event.target;
+ if(target==destinationSelect){
+  selectDestination();
+ }
+       }); */
+
+
+
+/* 
+        let b =tourItems.filter(tourItem=>{
+          if(tourItem.dataset.destination='France'){
+            return b;
+          }
+
+      }); */
+
+/*     
+let selectDestination=tourItems.filter(item=>{
+  item.dataset.destination='France';
+}); */
+
+
+
+
+       /*  tourItems.forEach((tourItem,i)=>{
             tourItem.style.cssText=`background: url("img/contentpic/${i}.jpg") no-repeat 50% 50%;
             background-size:contain;`;
-         });
+         }); */
 
-
+/* 
         tourLinksListTitle.textContent=toursDestinations[0];
 
         function selectDestination(target){
@@ -215,23 +430,5 @@ window.addEventListener("DOMContentLoaded", () => {
           }
 
 
-        });
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-});
+        }); */
 
