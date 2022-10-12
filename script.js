@@ -20,34 +20,14 @@ window.addEventListener("DOMContentLoaded", () => {
         toursDurations=['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16'],
         findTravel = document.querySelector(".find__travel"),
         symbolItems=document.querySelectorAll('.symbol__item'),
-        findTravelBackgrounds = [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
+        findTravelBackgrounds = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14",
         ],
-        findTravelBackgroundsVertical = [
-          "15",
-          "16",
-          "17",
-          "18",
-          "19",
-          "20",
-          "21",
-          "22",
-          "23",
-          "24",
-        ];
+        findTravelBackgroundsVertical = ["15","16","17","18","19","20","21","22","23","24",
+        ],
+        countriesInfos=document.querySelectorAll('.country__info'),
+        countriesList=document.querySelector('.countries__cards__list'),
+        countriesLinks=document.querySelectorAll('.country__card__link ');
+      
 
 
  
@@ -85,30 +65,21 @@ symbolItems.forEach((item,i)=>{
       
       showLetters();
 
-        /* symbolItems.forEach((item,i)=>{
-          setTimeout(showLetter(item),3000);
-        }); */
-    
-       /*  findTravelBackgrounds = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14",
-        "15","16","17","18","19","20","21","22","23","24"]; */
        let hideItem= function(items,i){
           items[i].classList.add('hide');
           items[i].classList.remove('show','fade');
           return items[i];
       };
-       let hideItems= function(items){
+
+       let hideAllItems= function(items){
           items.forEach(item=>{
           item.classList.add('hide');
           item.classList.remove('show','fade');
           return item;
           });
       };
-      let showItem= function(items,i){
-        items[i].classList.add('show','fade');
-        items[i].classList.remove('hide');
-        return items[i];
-    };
-     let showItems= function(items,i){
+
+     let showItem= function(items,i){
           items[i].classList.remove('hide');
           items[i].classList.add('show','fade');
           return items[i];
@@ -122,23 +93,49 @@ symbolItems.forEach((item,i)=>{
         return item;
       });
     };
+
+  
+
+
         //Nav-menu
-        hideItems(mainContents);
-        showItems(mainContents,0);
+        hideAllItems(mainContents);
+        showItem(mainContents,0);
         nav.addEventListener('click',(event)=>{
           let target=event.target;
-        
             navLinks.forEach((navLink,i)=>{
               navLink.classList.remove('active');
               if(target==navLink){
                 target.classList.add('active');
-
-                 hideItems(mainContents);
-                 showItems(mainContents,i);
+                 hideAllItems(mainContents);
+                 showItem(mainContents,i);
                 }
+              else if(i===3){
+                showItem(mainContents,3);
+        hideAllItems(countriesInfos);
+        showItem(countriesInfos,0);
+        countriesList.addEventListener('click',(event)=>{
+          let target=event.target;
+          if(mainContents[2].classList.contains('show')){
+            console.log('hye');
+            countriesLinks.forEach((countriesLink,j)=>{
+              if(target===countriesLink ){
+                hideAllItems(countriesInfos);
+                showItem(countriesInfos,j);
+               }
+             });
+          }
+       });
+              }  
             });
-        
         });
+
+
+
+
+
+
+
+
         ////////////////////////////////
         //Header-halfs
         window.addEventListener("scroll", checkHeaderHalfs);
@@ -222,22 +219,14 @@ symbolItems.forEach((item,i)=>{
         }
         ////////////////////////////////
 
-      
-   
-
-
 
         tourLinksListTitle.textContent=toursDestinations[0];
-
-
-    
 
         let selectDestination=function(indexSel){
           
           tourLinksListTitle.textContent=destinations[indexSel].value;
           
           if(durationSelect.selectedIndex!==0){
-          
           }
           else{
             tourItems.forEach((tourItem,i)=>{
@@ -246,20 +235,15 @@ symbolItems.forEach((item,i)=>{
               }
               else{
                 if(tourItem.dataset.destination==destinations[indexSel].value){
-                 showItems(tourItems,i);
-                 console.log(showItems(tourItems,i)); 
+                 showItem(tourItems,i);
+                 console.log(showItem(tourItems,i)); 
                   tourLinksListTitle.textContent=destinations[indexSel].value;
               }
               }
              });
-            
           }
-          
         };
 
-      
-
- 
         let selectDuration= function(indexSel){
        
           tourItems.forEach((tourItem,i)=>{
@@ -267,11 +251,10 @@ symbolItems.forEach((item,i)=>{
               showAllItems(tourItems);
             }
             else if(tourItem.dataset.duration==indexSel){
-              showItems(tourItems,i);
+              showItem(tourItems,i);
           }
             return tourItems;
           });
-     
         };    
         
         
@@ -279,17 +262,8 @@ symbolItems.forEach((item,i)=>{
         destinationSelect.addEventListener('change',(event)=>{
           let target=event.target;
           let indexSel=target.selectedIndex;
-          hideItems(tourItems);
-          /* selectDestination(indexSel); */
+          hideAllItems(tourItems);
           });
-
-        /*   durationSelect.addEventListener('change',(event)=>{
-            let target=event.target;
-            let indexSel=target.selectedIndex;
-            hideItems(tourItems);
-            selectDuration(indexSel);
-            }); */
-
 
           let selectType=function(indexSel){
             tourItems.forEach((tourItem,i)=>{
@@ -297,7 +271,7 @@ symbolItems.forEach((item,i)=>{
                 showAllItems(tourItems);
               }
               else if(tourItem.dataset.type==typeSelect[indexSel].value){
-                showItems(tourItems,i);
+                showItem(tourItems,i);
               }
             });
           };
@@ -305,7 +279,7 @@ symbolItems.forEach((item,i)=>{
         toursFilter.addEventListener('change',(event)=>{
         let target=event.target;
         let indexSel=target.selectedIndex;
-        hideItems(tourItems);
+        hideAllItems(tourItems);
         console.log(indexSel);
           if(target==destinationSelect){
         selectDestination(indexSel);
@@ -323,112 +297,82 @@ symbolItems.forEach((item,i)=>{
 
 
 
-
-
-
-
-
-
-   
-
-
-
-
+        let priceRange=document.getElementById('price').value;
+        console.log(priceRange);
 
 
 /* 
-        hideItems(symbolItems);
-       
+        let countriesInfos=document.querySelectorAll('.country__info'),
+        countriesList=document.querySelector('.countries__cards__list'),
+        countriesLinks=document.querySelectorAll('.country__card__link ');
+        hideAllItems(countriesInfos);
+        showItem(countriesInfos,0);
+         */
+ /*        
+        function chooseCountry(target){
+          if(mainContents[2].classList.contains('show')){
+            countriesLinks.forEach((j)=>{
+              if(target && target.classList.contains('country__card__link') ){
+                hideAllItems(countriesInfos);
+                showItem(countriesInfos,j);
+                console.log(j);
+               }
+             });
+          }
+        } */
         
-            symbolItems[i].classList.remove('hide');
-            symbolItems[i].classList.add('show'); */
-     
         
+         /*  countriesList.addEventListener('click',(event)=>{
+            let target=event.target;
+           
+            if(mainContents[2].classList.contains('show')){
+              console.log('hye');
+              countriesInfos.forEach((j)=>{
+                if(target && target.classList.contains('country__card__link') ){
+                  hideAllItems(countriesInfos);
+                  showItem(countriesInfos,j);
+                  console.log(j);
+                 }
+               });
+            }
+         }); */
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 });
-        /* let tourLinksArray=[];
-        tourItems.forEach((item)=>{
-          tourLinksArray.push(item);
-        });
-        item.classList.remove('hide');
-          item.classList.add('show');
-
-       function selectDestination(){
-        let b =tourLinksArray.filter(item=>{
-          item.dataset.destination='France';
-        });
-
-        console.log(b);
-      }
-       
-       toursFilter.addEventListener('change',(event)=>{
- let target=event.target;
- if(target==destinationSelect){
-  selectDestination();
- }
-       }); */
-
-
-
-/* 
-        let b =tourItems.filter(tourItem=>{
-          if(tourItem.dataset.destination='France'){
-            return b;
-          }
-
-      }); */
-
-/*     
-let selectDestination=tourItems.filter(item=>{
-  item.dataset.destination='France';
-}); */
+        
 
 
 
 
-       /*  tourItems.forEach((tourItem,i)=>{
-            tourItem.style.cssText=`background: url("img/contentpic/${i}.jpg") no-repeat 50% 50%;
-            background-size:contain;`;
-         }); */
-
-/* 
-        tourLinksListTitle.textContent=toursDestinations[0];
-
-        function selectDestination(target){
-
-          hideItems(tourItems);
-          let j=Number(target.selectedIndex);
-          tourLinksListTitle.textContent=toursDestinations[j];
-          tourItems.forEach((tourItem,i)=>{
-            if(tourItem.dataset.destination==toursDestinations[j]){
-            showItems(tourItems,i);
-            
-            tourLinksListTitle.textContent=toursDestinations[j];
-            }
-          });
-
-        }
-        function selectDuration(target){
-
-          hideItems(tourItems);
-          let j=Number((target.selectedIndex)+3);
-              tourItems.forEach((tourItem,i)=>{
-                  if(tourItem.dataset.duration==j){
-                  showItems(tourItems,i);
-                }
-              });
-        }
-        toursFilter.addEventListener('change',(event)=>{
-        let target=event.target;
-        if(target==durationSelect){
-          selectDuration(durationSelect);}
-
-          if(target==destinationSelect){
-        selectDestination(destinationSelect);
-          }
 
 
-        }); */
+
+ 
+
+
+
 

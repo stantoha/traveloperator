@@ -138,7 +138,7 @@ display: flex;
 }
 .header__subtitle {
     flex: 0 0 100%;
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
 /*______________________________________________*/
@@ -161,22 +161,20 @@ display: flex;
     min-width: 55%;
 }
 .header__login__form label{
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 .email,
 .password {
     flex: 0 0 100%;
     max-height:15px;
-margin: 5px auto;
+margin: 5px ;
 text-align: center;
-/* max-width: 45%;
- */}
+}
 input[type="submit"] {
     border:1px solid rgba(0,0,0,0.2);
     flex:1 1 auto;
     max-height: 20px;
-    font-size: 0.8em;
-    max-width: 25%;
+    font-size: 0.7em;
     margin: 0 auto;
 }
 
@@ -205,7 +203,7 @@ input[type="submit"] {
     padding: 5px;
 }
 .nav__menu__link {
-    font-size: 0.8em;
+    font-size: 0.7em;
     text-decoration: none;
     color:rgba(255,255,255,1);
    /*  margin: 7px; */
@@ -297,7 +295,6 @@ input[type="submit"] {
     border-radius: 15px/15px;
     box-shadow:0 0 10px rgba(0,0,0,0.5);
 }
-
 
 .accent__title {
     display: inline;
@@ -497,7 +494,7 @@ img.achievments__image {
     font-size: 2em;
 letter-spacing: 5px;}
 .tour__duration {
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
 
@@ -507,7 +504,7 @@ letter-spacing: 5px;}
 /*______________________________________________*/
 
 .basic__info {
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 .route {
  
@@ -687,6 +684,11 @@ letter-spacing: 5px;}
     margin-top: 100px;
 }
 
+
+.tours__filter{
+    background-color:rgba(0,0,0,0.5)
+}
+
 /*______________________________________________*/
 
 
@@ -695,19 +697,20 @@ letter-spacing: 5px;}
 
 .destination__select{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction:column;
     align-items:center;
+    padding: 5px 0;
 }
 
 p.select__title{
-    font-size: 0.8em;
-    margin: 0;
+    font-size: 0.7em;
+    margin:0 0 5px 0;
 }
 .select__destination{
 }
 
 option.destination__item {
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
 
@@ -730,8 +733,9 @@ option.destination__item {
 
 .duration__select{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction:column;
     align-items:center;
+    padding: 5px 0;
 }
 
 .select__duration {
@@ -741,8 +745,9 @@ option.destination__item {
 
 .type__select {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction:column;
     align-items:center;
+    padding: 5px 0;
 }
 .select__title {
 }
@@ -752,8 +757,9 @@ option.destination__item {
 }
 .price__select {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction:column;
     align-items:center;
+    padding: 5px 0;
 }
 /*______________________________________________*/
 
@@ -803,7 +809,59 @@ padding: 10px;
   }
  
 
+/* Countries */
 
+
+.container-fluid {
+}
+.countries {
+    position: relative;
+    padding-top: 110px;
+}
+.country__info {
+    margin-left: 15%;
+}
+.country__name {
+}
+.country__title__image {
+}
+.country__basic__info {
+}
+.places__of__interest {
+}
+.place__of__interest {
+}
+.short__history {
+}
+.souvenirs__list {
+}
+.souvenir {
+}
+.our__tour__links__list {
+}
+.our__tour__item {
+}
+.our__tour__item__link {
+}
+.countries__cards__list {
+}
+.side__bar {
+    position: absolute;
+    width: 15%;
+    left: 0;
+}
+.countries__cards__list__title {
+}
+.countries__cards__list__item {
+}
+.country__card__name {
+}
+.country__card__link {
+    color:rgba(0,0,0,1);
+    
+}
+.country__card__title__image {
+}
 
 
 
