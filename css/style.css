@@ -81,6 +81,7 @@ body{
     background-color:rgba(0,0,0,0.5);
     transition: transform 0.7s ease-in-out;
     margin: 0 auto;
+    border-bottom: 2px solid rgba(0,0,0,0.7);
 }
 .header.top__slide{
     transform: translateY(-400px);
@@ -149,7 +150,8 @@ display: flex;
 .header__login__form {
     display: flex;
     align-items:center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content:center;
     text-align: center;
     height: 90px;
 }
@@ -165,15 +167,17 @@ display: flex;
 }
 .email,
 .password {
-    flex: 0 0 100%;
-    max-height:15px;
+    flex: 1 1 auto;
+    max-height:10px;
+    width: 90px;
 margin: 5px ;
 text-align: center;
 }
 input[type="submit"] {
     border:1px solid rgba(0,0,0,0.2);
     flex:1 1 auto;
-    max-height: 20px;
+    max-height: 15px;
+    width: 50px;
     font-size: 0.7em;
     margin: 0 auto;
 }
@@ -224,13 +228,14 @@ input[type="submit"] {
 .main.row{
     position: relative;
     overflow: hidden;
-    width: 100%;
-    margin: 0;
+    max-width: 100%; 
+    margin: 0 auto;
     padding: 0;
 }
 
 .main__content{
     z-index: 900;
+   
 }
 
 
@@ -251,14 +256,9 @@ input[type="submit"] {
      color:rgba(255,255,255,1);
 }
 
-.find__travel__title{
-   /*  flex: 0 0 100%; */
-    margin: 10% auto;
-    text-align: center;
-}
 
 .find__travel__title span{
-   /*  flex: 0 0 100%; */
+   display: inline-flex;
     font-size: 1em;
     letter-spacing: 7px;
     text-shadow: 3px 0 3px rgba(0,0,0,1);
@@ -266,27 +266,27 @@ input[type="submit"] {
 
 
 .find__travel__title {
-   /*  flex: 0 0 100%; */
+   display: inline-flex;
    text-align: center;
    margin-top: 120px;
     font-size: 2em;
-    letter-spacing: 1px;
+    letter-spacing: 5px;
     font-weight: 900;
     text-shadow: 3px 0 3px rgba(0,0,0,1);
 }
 .find__travel__slogan {
-   /*  flex: 0 0 100%; */
-    max-width: 70%;
-    font-size: 2em;
+   display: inline-flex;
+    max-width: 80%;
+    font-size: 2.5em;
     text-shadow: 3px 0 3px rgba(0,0,0,1);
-    letter-spacing: 1px;
+    letter-spacing: 5px;
     padding:0px;
     font-weight: 900;
 }
 .find__travel .btn {
    /*  flex: 0 0 100%; */ 
     max-width:500px ;
-    font-size: 1em;
+    font-size: 2em;
     font-weight: 900;
     letter-spacing: 2PX;
     margin: 10px auto;
@@ -346,7 +346,7 @@ input[type="submit"] {
 
 
 .achievments.container-fluid {
-    margin: 0;
+    margin:30px 0;
     padding: 0;
 }
 .achievments__list{
@@ -357,8 +357,9 @@ input[type="submit"] {
     margin-bottom: 20px;
 }
 .achievment {
+    position: relative;
     border:1px solid rgba(0,0,0,0.2);
-    background-color:rgba(0,0,0,0.01);
+    background-color:rgba(0,0,0,0.1);
     text-align: center;
     box-shadow:0 0 10px rgba(0,0,0,0.1);
    display: flex;
@@ -373,6 +374,8 @@ input[type="submit"] {
 }
 
 img.achievments__image {
+    position: absolute;
+    z-index: 2000;
     flex: 0 0 100%;
     margin: 30px auto;
 }
@@ -459,13 +462,13 @@ img.achievments__image {
   opacity: 0;
   }
   
-  .section:nth-of-type(even) {
+  .section:nth-of-type(2n) {
     background-color: rgba(255,255,255,0.3);
   transform: translate(-400%,-20%);
   }
   
   .section:nth-of-type(3n) {
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(0,0,0,0.1);
   }
 
   .section.shown{
@@ -478,8 +481,13 @@ img.achievments__image {
     font-size: 1.5em;
     text-align: center;
     padding: 15px;
-    letter-spacing: 2px;
+    font-weight: 900;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-shadow: rgba(255,255,255,1);
     background-color: rgba(0,0,0,0.2);
+    color:rgba(255,255,255,0.8);
+    border-bottom:3px solid rgba(255,255,255,1);
 }
 
 /*________________________________________________*/
@@ -703,7 +711,9 @@ letter-spacing: 5px;}
 }
 
 p.select__title{
-    font-size: 0.7em;
+    color:rgba(255,255,255,0.9);
+    font-size: 1em;
+    letter-spacing: 3px;
     margin:0 0 5px 0;
 }
 .select__destination{
@@ -768,44 +778,47 @@ option.destination__item {
 
 .tour__links__list.row{
     margin: 0;
-    padding: 0;
-    padding-bottom: 30px;
+
 }
 .tour__links__list {
     display: flex;
     align-items:center;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 20px;
+    gap: 25px;
     background-color:rgba(0,0,0,0.1);
+    padding:0 0 30px 0;
   }
   .tour__item {
-box-shadow:0 0 5px rgba(0,0,0,1 );
-border-radius:10px/10px;
+    color:rgba(255,255,255,0.9);
+    background-color:rgba(0,0,0,0.05);
+box-shadow:0px 0px 10px rgba(0,0,0,1 );
+border-radius:12px/12px;
 text-align: center;
-height: 200px;
-width: 200px;
-padding: 10px;
+height: 320px;
+width: 270px;
+/* padding: 10px; */
   }
   .tour__links__list__title{
-
+   border-top: 3px solid rgba(0,0,0,0.7);
   }
   .tour__link{
 
    color:rgba(0,0,0,0.5);
    display: block;
-   background-color:rgba(255,255,255,0.3);
+   background-color:rgba(255,255,255,0.1);
    text-shadow: 0 0 2px rgba(0,0,0,0.5);
-   font-size: 1em;
-   letter-spacing: 2px;
+   font-size: 1.2em;
+   letter-spacing: 4px;
    text-decoration: none;
-   font-weight: 700;
+   font-weight: 900;
+   padding: 10px;
   }
 
   .tour__link img{
-    height: 150px;
-    width: 150px;
-
+    height: 250px;
+    width: 200px;
+ /*    padding: -20px; */
   }
  
 
