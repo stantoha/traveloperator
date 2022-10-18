@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", () => {
         typeSelect=document.querySelector('.select__type'),
         toursFilter=document.querySelector('.tours__filter'),
         mainContents=document.querySelectorAll('.main__content'),
-        tourNames=['Paris','Budapest','Prague','Berlin','Munich','Drezden','Hamburg','Rome','Venecia','Toscana'],
+       /*  tourNames=['Paris','Budapest','Prague','Berlin','Munich','Drezden','Hamburg','Rome','Venecia','Toscana'], */
         toursDestinations=['All tours','France','Hungary','Czech','Germany','Italy','Tailand',
         'India','USA','Mexica','Canada','Dominicana','Marrocco','Tunis'],
         toursDurations=['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16'],
@@ -98,6 +98,20 @@ symbolItems.forEach((item,i)=>{
 
 
         //Nav-menu
+
+        let navBtn=document.querySelector('.nav__btn');
+        navBtn.addEventListener('click',function(){
+          navBtn.classList.toggle('nav__btn__transform');
+          if(!(nav.classList.contains('slide__right'))){
+          nav.classList.add('slide__right');
+          }
+          else{
+            nav.classList.remove('slide__right');
+          }
+        });
+
+
+
         hideAllItems(mainContents);
         showItem(mainContents,0);
         nav.addEventListener('click',(event)=>{
@@ -222,6 +236,9 @@ symbolItems.forEach((item,i)=>{
 
         tourLinksListTitle.textContent=toursDestinations[0];
 
+
+
+
         let selectDestination=function(indexSel){
           
           tourLinksListTitle.textContent=destinations[indexSel].value;
@@ -244,7 +261,7 @@ symbolItems.forEach((item,i)=>{
           }
         };
 
-        let selectDuration= function(indexSel){
+         let selectDuration= function(indexSel){
        
           tourItems.forEach((tourItem,i)=>{
             if(indexSel===0){
@@ -256,9 +273,9 @@ symbolItems.forEach((item,i)=>{
             return tourItems;
           });
         };    
+ 
         
-        
-
+ 
         destinationSelect.addEventListener('change',(event)=>{
           let target=event.target;
           let indexSel=target.selectedIndex;
@@ -275,7 +292,7 @@ symbolItems.forEach((item,i)=>{
               }
             });
           };
-
+ 
         toursFilter.addEventListener('change',(event)=>{
         let target=event.target;
         let indexSel=target.selectedIndex;
@@ -292,52 +309,88 @@ symbolItems.forEach((item,i)=>{
           }
         });
 
-
+ 
 
 
 
 
         let priceRange=document.getElementById('price').value;
-        console.log(priceRange);
+        console.log(priceRange); 
 
 
-/* 
-        let countriesInfos=document.querySelectorAll('.country__info'),
-        countriesList=document.querySelector('.countries__cards__list'),
-        countriesLinks=document.querySelectorAll('.country__card__link ');
-        hideAllItems(countriesInfos);
-        showItem(countriesInfos,0);
-         */
- /*        
-        function chooseCountry(target){
-          if(mainContents[2].classList.contains('show')){
-            countriesLinks.forEach((j)=>{
-              if(target && target.classList.contains('country__card__link') ){
-                hideAllItems(countriesInfos);
-                showItem(countriesInfos,j);
-                console.log(j);
-               }
-             });
-          }
-        } */
-        
-        
-         /*  countriesList.addEventListener('click',(event)=>{
-            let target=event.target;
-           
-            if(mainContents[2].classList.contains('show')){
-              console.log('hye');
-              countriesInfos.forEach((j)=>{
-                if(target && target.classList.contains('country__card__link') ){
-                  hideAllItems(countriesInfos);
-                  showItem(countriesInfos,j);
-                  console.log(j);
-                 }
-               });
+
+     function filterTours(){
+          tourItems.forEach((tourItem,i)=>{
+            if(destinationSelect.selectedIndex.value!==0 && tourItem.dataset.destination==destinations[indexSel].value){
             }
-         }); */
+
+          });
+        }
 
         
+
+        let tourLinksList=document.querySelector('.tour__links__list'),
+        tourLinks=document.querySelectorAll('.tour__link'),
+        tourCard=document.querySelector('.tour__card');
+        
+        
+        let tourNames=['Paris,my Love','Berlin,Old & New'],
+        tourDurations=['6','8'],
+        routePoints=[['Lviv','Krakow','Drezden','Reims','Paris','Frankfurt','Wroclaw'],
+        ['Lviv','Krakow','Berlin','Wroclaw']],
+        countriesVisited=[['Ukraine','Poland','Germany','France'],
+        ['Ukraine','Poland','Germany']];
+        
+        
+        
+        let tourName=tourCard.children[0].children[0].children[0],
+         tourDuration=tourCard.children[0].children[0].children[1],
+         tourRoutePointsList=tourCard.children[1].children[0],
+         tourCountriesVisitedList=tourCard.children[1].children[1];
+         let showCardTitle=function(target){
+            tourLinks.forEach((item,i)=>{
+                if(target===tourLinks[i]){
+                    console.log(i);
+                    tourName.textContent=tourNames[i];
+                    tourDuration.textContent=tourDurations[i]+' days';
+                  }
+            });
+        };
+        let showRoute=function(target){
+           tourLinks.forEach((item,i)=>{
+            if(target===tourLinks[i]){
+                for(let j=0;j<routePoints[i].length;j++){
+                    const routePoint=document.createElement('li');
+                    routePoint.classList.add('route__point');
+                    routePoint.textContent=(routePoints[i])[j]; 
+                    tourRoutePointsList.append(routePoint);
+                }
+              }
+        });
+        };
+        let showCountriesVisited=function(target){
+            tourLinks.forEach((item,i)=>{
+             if(target===tourLinks[i]){
+                 for(let j=0;j<countriesVisited[i].length;j++){
+                     const countryVisited=document.createElement('li');
+                     countryVisited.classList.add('countries__visited__item');
+                     countryVisited.textContent=(countriesVisited[i])[j]; 
+                     tourCountriesVisitedList.append(countryVisited);
+                 }
+               }
+         });
+         };
+        
+        
+        
+        tourLinksList.addEventListener('click',(event)=>{
+            let target=event.target;
+     
+               showCardTitle(target);
+               showRoute(target);
+               showCountriesVisited(target);
+        });
+
 
 
 
