@@ -5,7 +5,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
         headerHalfs = document.querySelectorAll(".header__half"),
         header = document.querySelector(".header"),
-        toursList=document.querySelector('.tour__links__list'),
         tourLinksListTitle=document.querySelector('.tour__links__list__title'),
         tourItems=document.querySelectorAll('.tour__item'),
         destinationSelect=document.querySelector('.select__destination'),
@@ -14,7 +13,6 @@ window.addEventListener("DOMContentLoaded", () => {
         typeSelect=document.querySelector('.select__type'),
         toursFilter=document.querySelector('.tours__filter'),
         mainContents=document.querySelectorAll('.main__content'),
-       /*  tourNames=['Paris','Budapest','Prague','Berlin','Munich','Drezden','Hamburg','Rome','Venecia','Toscana'], */
         toursDestinations=['All tours','France','Hungary','Czech','Germany','Italy','Tailand',
         'India','USA','Mexica','Canada','Dominicana','Marrocco','Tunis'],
         toursDurations=['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16'],
@@ -26,8 +24,27 @@ window.addEventListener("DOMContentLoaded", () => {
         ],
         countriesInfos=document.querySelectorAll('.country__info'),
         countriesList=document.querySelector('.countries__cards__list'),
-        countriesLinks=document.querySelectorAll('.country__card__link ');
+        countriesLinks=document.querySelectorAll('.country__card__link '),
+        modalLogin=document.querySelector('.modal__login'),
+        modalCloseButton=document.getElementById('modal__close');
+
+       let  showModal= function(){
+          modalLogin.classList.remove('slide__right');
+       };
+        setTimeout(showModal,5000);
       
+
+        let  closeModal= function(){
+          modalLogin.classList.add('slide__right');
+       };
+
+       modalLogin.addEventListener('click',(event)=>{
+        let target=event.target;
+        if(target && target.classList.contains('modal__close')){
+          console.log('hye');
+          closeModal();
+        }
+       });
 
 
  
