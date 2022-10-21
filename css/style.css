@@ -39,8 +39,8 @@ h6{
 
 html,
 body{
-  font-family: 'Ubuntu', sans-serif;
-    height: 100%;
+    
+  /*   height: 100%; */
     line-height: 1;
 }
 body{
@@ -53,14 +53,14 @@ body{
 .wrapper.container-fluid{
     position: relative;
     overflow: hidden;
-    /* max-width: 1720px; */
+   width: 100%;
     top: 0;
     left: 0;
-    margin: 0 auto;
+    margin: 0 ;
     padding: 0;
     background-color:rgba(0, 0, 0, 0.7);         
     color:rgba(255,255,255, 1);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+    font-family: 'Lato', sans-serif;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 }
 
 
@@ -78,13 +78,14 @@ body{
 .header.row{
     position: fixed;
     overflow: hidden;
-    height: 90px;
+    height: 70px;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     background-color:rgba(0,0,0,0.7);
     transition: transform 0.7s ease-in-out;
+    padding: 0;
     margin: 0 auto;
     border-bottom: 2px solid rgba(0,0,0,0.5);
 }
@@ -127,8 +128,8 @@ display: flex;
     justify-content: center;
 }
 .header__logo__icon {
-    max-width: 60px;
-    height: 60px;    
+    max-width: 50px;
+    height: 50px;    
 }
 
 /*______________________________________________*/
@@ -148,6 +149,7 @@ display: flex;
 }
 .title {
     width:  100%;
+    font-family: 'Wendy One', sans-serif;    
     font-size: 1.2em;
     color:rgba(231, 220, 74, 1);
 }
@@ -174,7 +176,7 @@ display: flex;
     display: flex;
     align-items:center;
     text-decoration: none;
-    color:rgba(231, 220, 74, 1);
+    color:rgba(255, 255, 255, 1);
 }
 
 .phone__number svg{
@@ -189,9 +191,9 @@ display: flex;
     margin: 0;
 }
 .header__social__link svg{
-    color:rgba(231, 220, 74, 1);
-    width: 150%;
-    height: 150%;
+    color:rgba(255, 255, 255, 1);
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
 }
 
@@ -210,12 +212,12 @@ display: flex;
 .nav__btn{
     /* display: none; */
     position: relative;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     z-index: 1;
     top: 0;
-    right: 20px;
+    right: 30px;
   }
   
 .nav__btn > span,
@@ -225,8 +227,8 @@ display: flex;
   position: absolute;
   top: 25px;
   right: 0;
-  width: 60px;
-  height:8px;
+  width: 50px;
+  height:6px;
   border-radius: 15px/15px;
   background-color: rgba(255, 255, 255, 1);
   transition-duration: 0.3s;
@@ -235,13 +237,13 @@ display: flex;
 
 .nav__btn > span::before {
   content: "";
-  top: -25px;
+  top: -20px;
   background-color: rgba(255, 255, 255, 1);
 }
 
 .nav__btn > span::after {
   content: "";
-  top: 25px;
+  top: 20px;
   background-color: rgba(255, 255, 255, 1);
 }
 
@@ -287,15 +289,17 @@ display: flex;
 .nav__menu__item {
     text-transform: uppercase;
     padding: 5px;
-    background-color:rgba(0,0,0,0.3);
-}
+/*     background-color:rgba(0,0,0,0.3);
+ */}
 .nav__menu__link {
-    font-size: 0.9em;
+    font-size: 0.7em;
     text-decoration: none;
     color:rgba(255,255,255,1);
+  /*   font-family: 'Wendy One', sans-serif;  */
    /*  margin: 7px; */
 }
 .nav__menu__link.active {
+   /*  font-family: 'Loto'; */
     color:rgba(231, 220, 74, 1);
     font-weight: 700;
 }
@@ -311,14 +315,16 @@ display: flex;
 .main.row{
     position: relative;
     overflow: hidden;
-    max-width: 100%; 
+   /*  max-width: 1720px; */
+   width: 100%;
     margin: 0 auto;
     padding: 0;
 }
 
 .main__content{
-    z-index: 900;
-   
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -351,17 +357,19 @@ display: flex;
    display: inline-flex;
    text-align: center;
    margin-top: 120px;
-    font-size: 1.4em;
-    letter-spacing: 5px;
+    font-size: 1em;
+     letter-spacing: 7px; 
+    text-transform: uppercase;
     font-weight: 900;
     text-shadow: 3px 0 3px rgba(0,0,0,1);
 }
 .find__travel__slogan {
    display: inline-flex;
     max-width: 80%;
-    font-size: 1.5em;
+    font-size: 1em;
     text-shadow: 3px 0 3px rgba(0,0,0,1);
-    letter-spacing: 5px;
+     letter-spacing: 7px; 
+    text-transform: uppercase;
     padding:0px;
     font-weight: 900;
 }
@@ -387,7 +395,7 @@ display: flex;
 
 .second__word,
 .first__word {
-    font-size: 0.5em;
+   /*  font-size: 0.5em; */
     display: flex;
     justify-content: space-between;
     align-items:center;
@@ -402,17 +410,17 @@ display: flex;
     margin-left: 3%;
 }
 
-.symbol__item {
+.symbol__item { 
+    font-family: 'Wendy One', sans-serif;    
     position: relative;
     font-size: 5em;
-    font-style: italic;
-    font-weight: 800;
+    font-weight: 100;
     display: flex;
     justify-content: center;
     align-items:center;
     text-align: center;
     text-shadow: 3px 0 3px rgba(0,0,0,1);
-    margin: 0 auto;
+    margin: 5px;
     transform:translateX(0) ;
     transition: all 1s ease-in-out;
 }
@@ -507,11 +515,13 @@ rgba(38, 60, 116, 1) */
 .booking__steps.container-fluid {
     margin:50px 0;
     padding: 0;
+  
 }
 
 .booking__steps__list {
    text-align: center;
    padding: 30px;
+   box-shadow:0 0 5px rgba(255,255,255,1);
 }
 
 .booking__step__list__title {
@@ -528,10 +538,12 @@ rgba(38, 60, 116, 1) */
     margin: 30px 0;
 }
 .booking__step__text {
+    font-family: 'Wendy One', sans-serif;    
+letter-spacing: 2px;
  text-align: center;
  padding: 30px; 
  font-size: 1.5em;
- font-weight: 700;
+ font-weight: 200;
 }
 .booking__consult__link{
     padding: 30px; 
@@ -596,15 +608,17 @@ rgba(38, 60, 116, 1) */
 }
 
   .section__title{
+    font-family: 'Wendy One', sans-serif;    
+
     font-size: 1.5em;
     text-align: center;
     max-width: 90%;
-    padding: 5px;
+    padding:15px 5px;
     margin:0px auto 50px auto;
-    font-weight: 600;
+    font-weight: 100;
     letter-spacing: 5px;
     text-transform: uppercase;
-    font-style: italic;
+   /*  font-style: italic; */
     text-shadow:0px 0px 1px rgba(255,255,255,1);
     background-color: rgba(255,255,255,0.2);
     color:rgba(255,255,255,1);
@@ -834,7 +848,7 @@ letter-spacing: 5px;}
 .tour__select.container-fluid{
     margin: 0;
     padding: 0;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 
@@ -937,36 +951,50 @@ option.destination__item {
 
   
   .tour__item {
-    color:rgba(255,255,255,0.9);
-    background-color:rgba(188, 212, 211, 1);
-box-shadow:0px 0px 10px rgba(0,0,0,1 );
-border-radius:12px/12px;
-text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+box-shadow:0px 0px 5px rgba(0,0,0,1 );
 height: 320px;
 width: 270px;
-/* padding: 10px; */
+/* background-color:rgba(0, 0, 0, 0.5); */ 
+
+position: relative;
   }
+
   .tour__links__list__title{
    border-top: 3px solid rgba(0,0,0,0.7);
   }
   .tour__link{
-
-   color:rgba(0,0,0,0.5);
-   display: block;
-   background-color:rgba(255,255,255,0.1);
-   text-shadow: 0 0 2px rgba(0,0,0,0.5);
-   font-size: 1.2em;
-   letter-spacing: 4px;
-   text-decoration: none;
-   font-weight: 900;
-   padding: 10px;
+    font-family: 'Lato', sans-serif;  
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
+ /*  font-family: 'Wendy One', sans-serif; */
+  a.tour__link {
+   /*  position: absolute;
+    top: 10px;
+    left: 80px; */
+    padding: 15px;
+    color:rgba(255,255,255,1);
+    text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    font-size: 1.7em;
+    letter-spacing: 5px;
+    text-decoration: none;
+    font-weight: 900;
+   /*  background-color:rgba(0, 0, 0, 0.5); */
+    border-radius:15px/15px;
+    height: 320px;
+width: 270px;
   }
 
-  .tour__link img{
-    height: 250px;
-    width: 200px;
- /*    padding: -20px; */
-  }
+  
+ /*  .tour__link img{
+    height: 320px;
+width: 270px;
+  } */
  
 
 /* Countries */
@@ -975,11 +1003,16 @@ width: 270px;
 .container-fluid {
 }
 .countries {
-    position: relative;
+   /*  position: relative;
+    min-height: 100vh; */
     padding-top: 110px;
 }
 .country__info {
     margin-left: 15%;
+    width: 85%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
 }
 .country__name {
 }
@@ -1091,8 +1124,8 @@ width: 270px;
 
 .modal__login {
     position: fixed;
-    right: 20px;
-    bottom:20px;
+    right: 0px;
+    bottom:0px;
     transition: all 0.3s;
     z-index: 3000;
 
@@ -1103,57 +1136,65 @@ width: 270px;
     flex-direction: column;
     justify-content:center;
     text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 1);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
     height: auto;
-    width: 400px;
+    /* width: 450px; */
     border:1px solid rgba(0,0,0,0.2);
 }
 
 
 .modal__login h3{
     color:rgba(231, 220, 74, 1);
-    font-size: 2em;
+    font-size: 1.5em;
+     font-family: 'Wendy One', sans-serif;  
+     font-weight: 100;
+     letter-spacing: 1px;  
 }
 
 .modal__login p{
-    font-size: 1.5em;
+    display: inline-block;
+    font-size: 0.8em;
     color:rgba(255, 255, 255, 1);
+    letter-spacing: 2px;
+    font-weight: 700;
 }
 
-input[type="email"],
-input[type="password"] {
+input[type="email"]/* ,
+input[type="password"] */ {
         border:1px solid rgba(0,0,0,0.2);
         flex:1 1 auto;
+        height: 15px;
         max-width: 200px;
-        font-size: 1em;
+        font-size: 0.8em;
         font-weight: 700;
         padding: 2px;
         margin: 3px auto;
     }
 input[type="submit"] {
-    border:1px solid rgba(231, 220, 74, 1);
-    background-color:rgba(231, 220, 74, 1);
-    padding:0 3px;
-    color:rgba(0,0,0, 1);
+    border:3px solid rgba(231, 220, 74, 1);
+    background-color:rgba(0,0,0, 1);
+    padding: 3px;
+    color:rgba(255,255,255, 1);
     width: 150px;
-    height: 25px;
+    height: auto;
     text-transform: uppercase;
     letter-spacing: 2px;
-    border-radius:10px/10px;
+    border-radius:15px/15px;
     font-size: 1em;
     margin: 5px auto;
+    vertical-align: middle;
 }
 
 .modal__close{
     position: absolute;
     top:10px;
     right:10px;
-    padding:5px 10px;
-    font-size: 1em;
+    padding:2px 6px;
+    font-size: 0.5em;
     border-radius: 50%;
-    border:1px solid rgba(255,255,255,1);
-    color:rgba(255,255,255, 1);
+    border:3px solid rgba(231, 220, 74, 1);
+    color:rgba(231, 220, 74, 1);
     text-decoration: none;
     font-weight: 900;
     transition: all 0.3s;

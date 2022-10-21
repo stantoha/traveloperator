@@ -15,7 +15,6 @@ window.addEventListener("DOMContentLoaded", () => {
         mainContents=document.querySelectorAll('.main__content'),
         toursDestinations=['All tours','France','Hungary','Czech','Germany','Italy','Tailand',
         'India','USA','Mexica','Canada','Dominicana','Marrocco','Tunis'],
-        toursDurations=['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16'],
         findTravel = document.querySelector(".find__travel"),
         symbolItems=document.querySelectorAll('.symbol__item'),
         findTravelBackgrounds = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14",
@@ -26,7 +25,8 @@ window.addEventListener("DOMContentLoaded", () => {
         countriesList=document.querySelector('.countries__cards__list'),
         countriesLinks=document.querySelectorAll('.country__card__link '),
         modalLogin=document.querySelector('.modal__login'),
-        modalCloseButton=document.getElementById('modal__close');
+        modalCloseButton=document.getElementById('modal__close'),
+        tourItemBGs=["img\\contentpic\\0.jpg","img\\contentpic\\1.jpg"];
 
        let  showModal= function(){
           modalLogin.classList.remove('slide__right');
@@ -59,14 +59,13 @@ symbolItems.forEach((item,i)=>{
   }
   });
 
-        let showLetter=function(item){
+      let showLetter=function(item){
           item.classList.remove('slide__left');
           item.classList.remove('slide__right');
       };
 
 
       function showLetters(){
-       
       let i=0;
          let letTimer= setTimeout(function timerLet(){
           do{
@@ -75,9 +74,7 @@ symbolItems.forEach((item,i)=>{
             letTimer=setTimeout(timerLet,300);
           }
           while(i===symbolItems.length);
-          
          } ,300);
-        
       }
       
       showLetters();
@@ -85,21 +82,18 @@ symbolItems.forEach((item,i)=>{
        let hideItem= function(items,i){
           items[i].classList.add('hide');
           items[i].classList.remove('show','fade');
-          return items[i];
       };
 
        let hideAllItems= function(items){
           items.forEach(item=>{
           item.classList.add('hide');
           item.classList.remove('show','fade');
-          return item;
           });
       };
 
      let showItem= function(items,i){
           items[i].classList.remove('hide');
           items[i].classList.add('show','fade');
-          return items[i];
       };
       
     
@@ -107,66 +101,8 @@ symbolItems.forEach((item,i)=>{
       items.forEach(item=>{
         item.classList.remove('hide');
         item.classList.add('show','fade');
-        return item;
       });
     };
-
-  
-
-
-        //Nav-menu
-
-        let navBtn=document.querySelector('.nav__btn');
-        navBtn.addEventListener('click',function(){
-          navBtn.classList.toggle('nav__btn__transform');
-          if(!(nav.classList.contains('slide__right'))){
-          nav.classList.add('slide__right');
-          }
-          else{
-            nav.classList.remove('slide__right');
-          }
-        });
-
-
-
-        hideAllItems(mainContents);
-        showItem(mainContents,0);
-
-        nav.addEventListener('click',(event)=>{
-          let target=event.target;
-            navLinks.forEach((navLink,i)=>{
-              navLink.classList.remove('active');
-              if(target==navLink){
-                target.classList.add('active');
-                 hideAllItems(mainContents);
-                 showItem(mainContents,i);
-                }
-              else if(i===3){
-                showItem(mainContents,3);
-        hideAllItems(countriesInfos);
-        showItem(countriesInfos,0);
-        countriesList.addEventListener('click',(event)=>{
-          let target=event.target;
-          if(mainContents[2].classList.contains('show')){
-            console.log('hye');
-            countriesLinks.forEach((countriesLink,j)=>{
-              if(target===countriesLink ){
-                hideAllItems(countriesInfos);
-                showItem(countriesInfos,j);
-               }
-             });
-          }
-       });
-              }  
-            });
-        });
-
-
-
-
-
-
-
 
         ////////////////////////////////
         //Header-halfs
@@ -200,13 +136,13 @@ symbolItems.forEach((item,i)=>{
         }
         
         function changeBackgroundTimer(i){
-           changeBackground(1,65);
+           changeBackground(1,60);
            if(document.documentElement.clientWidth>860){
             let id=setTimeout(function log(){
               if(i<findTravelBackgrounds.length){
                 i++;
                 console.log(i);
-                changeBackground(i,65);
+                changeBackground(i,60);
               }
               else{
                 i=1;
@@ -230,6 +166,54 @@ symbolItems.forEach((item,i)=>{
         }
         changeBackgroundTimer(1);
 
+
+  
+
+
+        //Nav-menu
+
+        let navBtn=document.querySelector('.nav__btn');
+        navBtn.addEventListener('click',function(){
+          navBtn.classList.toggle('nav__btn__transform');
+          if(!(nav.classList.contains('slide__right'))){
+          nav.classList.add('slide__right');
+          }
+          else{
+            nav.classList.remove('slide__right');
+          }
+        });
+
+        hideAllItems(mainContents);
+        showItem(mainContents,0);
+
+        nav.addEventListener('click',(event)=>{
+          let target=event.target;
+            navLinks.forEach((navLink,i)=>{
+              navLink.classList.remove('active');
+              if(target==navLink){
+                target.classList.add('active');
+                 hideAllItems(mainContents);
+                 showItem(mainContents,i);
+                }
+              else if(i===3){
+                showItem(mainContents,3);
+        hideAllItems(countriesInfos);
+        showItem(countriesInfos,0);
+        countriesList.addEventListener('click',(event)=>{
+          let target=event.target;
+          if(mainContents[2].classList.contains('show')){
+            console.log('hye');
+            countriesLinks.forEach((countriesLink,j)=>{
+              if(target===countriesLink ){
+                hideAllItems(countriesInfos);
+                showItem(countriesInfos,j);
+               }
+             });
+          }
+       });
+              }  
+            });
+        });
 
 
         ////////////////////////////////
