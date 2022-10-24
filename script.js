@@ -136,13 +136,13 @@ symbolItems.forEach((item,i)=>{
         }
         
         function changeBackgroundTimer(i){
-           changeBackground(1,60);
+           changeBackground(1,55);
            if(document.documentElement.clientWidth>860){
             let id=setTimeout(function log(){
               if(i<findTravelBackgrounds.length){
                 i++;
                 console.log(i);
-                changeBackground(i,60);
+                changeBackground(i,55);
               }
               else{
                 i=1;
@@ -167,9 +167,14 @@ symbolItems.forEach((item,i)=>{
         changeBackgroundTimer(1);
 
 
-  
-
-
+    /*   function showNavBtn(){
+        if(document.documentElement.clientWidth<860){
+          navBtn.style.cssText='display:block;position:relative;';
+          nav.classList.add('slide__right');
+        }
+      }
+        
+      showNavBtn(); */
         //Nav-menu
 
         let navBtn=document.querySelector('.nav__btn');
@@ -177,6 +182,7 @@ symbolItems.forEach((item,i)=>{
           navBtn.classList.toggle('nav__btn__transform');
           if(!(nav.classList.contains('slide__right'))){
           nav.classList.add('slide__right');
+          
           }
           else{
             nav.classList.remove('slide__right');
@@ -469,8 +475,51 @@ symbolItems.forEach((item,i)=>{
 
 
 
+/* 
 
+        let cardCreateButton=document.getElementById('create__tour__card'),
+        toursListBox=document.querySelector('.tours__list__box');
+        let toursList=toursListBox.children[0],
+        tourCreateForm=document.querySelector('.tour__create__form'),
+        
+        tourNameInput=document.querySelector('input','.tour__name__input'),
+        tourNameButton=document.querySelector('.name__submit'),
+        
+        tourDurationInput=document.querySelector('.tour__duration__input'),
+        tourDurationButton=document.querySelector('.duration__submit'),
+        
+        routePointInput=document.querySelector('.route__point__input');
+        
+         let addElement= function() {
+            var divCreate=document.createElement('div');
+            return divCreate;
+          };
+        
+        
+          function  setCardTitle(){
+            let text=tourNameInput.value;
+            let cardTitle=addElement();
+            cardTitle.classList.add('card__title','row');
+            cardTitle.innerHTML='<div class="col"></div>';
+            cardTitle.firstChild.innerHTML=`<h3 class="tour__name">${text}</h3>`;
+            toursList.prepend(cardTitle);
+          }
+        
+          tourNameButton.addEventListener('click',setCardTitle);
+        
+        
+        
+        function  getRoutePoints(){
+            let text=routePointInput.value;
+            let routePointList=document.createElement('ul');
+            routePointList.classList.add('card__title','row');
+            routePointList.innerHTML='<div class="col"></div>';
+            routePointList.firstChild.innerHTML=`<h3 class="tour__name">${text}</h3>`;
+            toursList.prepend(routePointList);
+          }
+        
 
+ */
 
 
 
