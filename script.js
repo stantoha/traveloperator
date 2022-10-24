@@ -25,14 +25,13 @@ window.addEventListener("DOMContentLoaded", () => {
         countriesList=document.querySelector('.countries__cards__list'),
         countriesLinks=document.querySelectorAll('.country__card__link '),
         modalLogin=document.querySelector('.modal__login'),
-        modalCloseButton=document.getElementById('modal__close'),
         tourItemBGs=["img\\contentpic\\0.jpg","img\\contentpic\\1.jpg"];
+
 
        let  showModal= function(){
           modalLogin.classList.remove('slide__right');
        };
         setTimeout(showModal,5000);
-      
 
         let  closeModal= function(){
           modalLogin.classList.add('slide__right');
@@ -45,27 +44,27 @@ window.addEventListener("DOMContentLoaded", () => {
           closeModal();
         }
        });
+       
 
-
- 
-
-        
-symbolItems.forEach((item,i)=>{
-  if(i%2===0){
-    item.classList.add('slide__left');
-  }
-  else{
-    item.classList.add('slide__right');
-  }
-  });
+       let hideLetters=function(){
+        symbolItems.forEach((item,i)=>{
+          if(i%2===0){
+            item.classList.add('slide__left');
+          }
+          else{
+            item.classList.add('slide__right');
+          }
+          });
+       };
+       
 
       let showLetter=function(item){
           item.classList.remove('slide__left');
           item.classList.remove('slide__right');
       };
 
-
-      function showLetters(){
+      
+     let showLetters= function(){
       let i=0;
          let letTimer= setTimeout(function timerLet(){
           do{
@@ -75,9 +74,9 @@ symbolItems.forEach((item,i)=>{
           }
           while(i===symbolItems.length);
          } ,300);
-      }
-      
-      showLetters();
+      };
+      hideLetters();
+      setTimeout(showLetters(),3000);
 
        let hideItem= function(items,i){
           items[i].classList.add('hide');
@@ -423,7 +422,7 @@ symbolItems.forEach((item,i)=>{
           if(target===tourLinks[i]){
             for(let j=0;j<tourLinks[i].parentElement.dataset.duration;j++){
               const programItem=document.createElement('li');
-              programItem.classList.add('tour__program__item');
+              programItem.classList.add('.section','tour__program__item');
               if(j%2!==0){
                 programItem.innerHTML=`<span class="day__number">${j+1} day</span>
                 <p class="day__descr">
