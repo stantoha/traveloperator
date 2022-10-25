@@ -54,6 +54,7 @@ window.addEventListener("DOMContentLoaded", () => {
           else{
             item.classList.add('slide__right');
           }
+          console.log(i);
           });
        };
        
@@ -61,12 +62,14 @@ window.addEventListener("DOMContentLoaded", () => {
       let showLetter=function(item){
           item.classList.remove('slide__left');
           item.classList.remove('slide__right');
+          item.classList.add('symbol__shadow');
+
       };
 
       
      let showLetters= function(){
       let i=0;
-         let letTimer= setTimeout(function timerLet(){
+         let letTimer=setTimeout(function timerLet(){
           do{
             showLetter(symbolItems[i]);
             i++;
@@ -76,8 +79,8 @@ window.addEventListener("DOMContentLoaded", () => {
          } ,300);
       };
       hideLetters();
-      setTimeout(showLetters(),3000);
-
+      /* setTimeout(showLetters(),3000); */
+      showLetters();
        let hideItem= function(items,i){
           items[i].classList.add('hide');
           items[i].classList.remove('show','fade');
@@ -135,13 +138,13 @@ window.addEventListener("DOMContentLoaded", () => {
         }
         
         function changeBackgroundTimer(i){
-           changeBackground(1,55);
+           changeBackground(1,60);
            if(document.documentElement.clientWidth>860){
             let id=setTimeout(function log(){
               if(i<findTravelBackgrounds.length){
                 i++;
                 console.log(i);
-                changeBackground(i,55);
+                changeBackground(i,60);
               }
               else{
                 i=1;
@@ -433,7 +436,7 @@ window.addEventListener("DOMContentLoaded", () => {
               }
               else{
                 programItem.innerHTML=`<span class="day__number">${j+1} day</span>
-              <img src="" width="250" heigth="250" alt="" class="descr__image" />
+              <img src=""  alt="" class="descr__image" />
               <p class="day__descr">
                 ${(dayDescrs[i])[j]}
               </p>`;
