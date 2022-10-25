@@ -60,7 +60,7 @@ body{
     left: 0;
     margin: 0 auto;
     padding: 0;
-    background-color:rgba(0, 0, 0, 0.6);         
+    background-color:rgba(0, 0, 0, 0.2);         
     color:rgba(255,255,255, 1);
     font-family: 'Lato', sans-serif;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 }
@@ -535,21 +535,23 @@ display: flex;
 .achievments__list{
     justify-content: space-between;
    text-align: center;
-   padding:30px;
+   padding:20px;
    background-color:rgba(0,0,0,0.5);
+   margin: 0px;
 }
 .achievments__list__title {
    
 }
 .achievment {
+    flex: 1 1 auto;
     position: relative;
-    border:1px solid rgba(0,0,0,0.2);
+   /*  border:1px solid rgba(0,0,0,0.2); */
     border-radius:10px/10px;
     text-align: center;
     box-shadow:0px 1px 1px rgba(0,0,0,1);
    display: flex;
    flex-wrap: wrap;
-   margin: 0 auto;
+   
    padding: 25px 25px 50px 25px;
 }
 
@@ -621,7 +623,7 @@ rgba(38, 60, 116, 1) */
     margin:50px 0;
     padding: 0;
     box-shadow:0 0 5px rgba(255,255,255,0.5);
-    background-color:rgba(161, 190, 151, 1);
+  /*   background-color:rgba(161, 190, 151, 1); */
 
 }
 
@@ -635,26 +637,25 @@ rgba(38, 60, 116, 1) */
 }
 
 .booking__step {
-    border:1px solid rgba(0,0,0,0.2);
-     min-height: 350px;
-     box-shadow:0px 3px 7px rgba(0, 0, 0, 1);
-
-/*      background-color:rgba(188, 212, 211, 1);
- */}
+    /* border:1px solid rgba(0,0,0,0.2); */
+     min-height: 300px;
+     box-shadow:0px 0px 7px rgba(255, 255, 255, 1);
+     background-color:rgba(188, 212, 211, 1);
+}
 
 .booking__step__title {
-    margin: 30px 0;
+    margin: 20px 0;
 }
 .booking__step__text {
     font-family: 'Wendy One', sans-serif;    
 letter-spacing: 2px;
  text-align: center;
- padding: 30px; 
+ padding: 20px; 
  font-size: 1.5em;
  font-weight: 200;
 }
 .booking__consult__link{
-    padding: 30px; 
+    padding: 20px; 
 }
 .find__travel .btn,
 .booking__consult__link .btn,
@@ -679,20 +680,21 @@ letter-spacing: 2px;
     padding: 0;
     /* border:5px solid rgba(0,0,0,0.5); */
     box-shadow:0px 2px 5px rgba(0, 0, 0, 1);
-    background-color:rgba(0,0,0,0.6);
+    background-color:rgba(0,0,0,0.2);
 
 
 }
 
 .travel__ways__list__title{
-    background-color:rgba(0, 0, 0, 0.4);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
-    box-shadow:0px 1px 10px rgba(255, 255, 255, 1);
-padding: 2px;
-    font-size: 2.2em;
-    letter-spacing: 10px;
-    width: 30vw;
-    font-weight: 900;
+    background-color:rgba(0, 0, 0, 0.7);
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 1);
+    box-shadow:0px 0px 10px rgba(255, 255, 255, 1);
+    padding: 2px;
+    font-size: 1.4em;
+    letter-spacing: 37px;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: 500;
     margin: 100px auto;
 }
 .travel__ways__list {
@@ -709,7 +711,7 @@ padding: 2px;
     left: 0;
     height: 60vh;
     margin: 15vh auto;
-    background-color:rgba(0,0,0,0.5);
+    background-color:rgba(0,0,0,0.6);
 }
 .travel__ways__list .travel__way__item {
     color:rgba(0, 0, 0, 1); 
@@ -720,7 +722,7 @@ padding: 2px;
     display: flex;
     flex-direction: column;
     align-items:center;
-    background-color:rgba(255,255,255,0.9);
+    background-color:rgba(255,255,255,0.8);
     box-shadow:0px 1px 1px rgba(0, 0, 0, 1);
     top:-50px;
 }
@@ -734,15 +736,14 @@ padding: 2px;
 .travel__way__link {
     color:rgba(231, 220, 74, 1);
     position: absolute;
-    bottom: 45px;
+    bottom: 65px;
     padding: 10px;
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: 700;
-    /* text-transform: uppercase; */
     font-size: 1em;
-    background-color:rgba(0,0,0,0.4);
-    box-shadow:1px 2px 7px rgba(0, 0, 0, 1);
+    background-color:rgba(0,0,0,0.5);
+    box-shadow:0px 0px 7px rgba(255, 255, 255, 1);
     border-radius:10px;
 }
 
@@ -752,7 +753,7 @@ padding: 2px;
 }
 
 .travel__ways .section__title{
-    color:rgba(231, 220, 74, 1);
+    color:rgba(255, 255, 255, 1);
     text-shadow: 1px 0px 1px rgba(0, 0, 0, 1);
     background-color:rgba(0,0,0,0.3);
     box-shadow:0px 3px 7px rgba(0, 0, 0, 1);
