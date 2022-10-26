@@ -62,7 +62,7 @@ body{
     padding: 0;
     background-color:rgba(0, 0, 0, 0.2);         
     color:rgba(255,255,255, 1);
-    font-family: 'Lato', sans-serif;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+    font-family: 'Montserrat', sans-serif;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 }
 
 
@@ -111,7 +111,7 @@ body{
 }
 
   .section__title{
-    font-family: 'Wendy One', sans-serif;    
+    font-family: 'Baloo 2', cursive;
     font-size: 1.2em;
     text-align: center;
     max-width: 50%;
@@ -208,7 +208,7 @@ display: flex;
 }
 .title {
     width:  100%;
-    font-family: 'Wendy One', sans-serif;    
+    font-family: 'Baloo 2', cursive;
     font-size: 1.2em;
     color:rgba(231, 220, 74, 1);
 }
@@ -462,8 +462,9 @@ display: flex;
     margin: 0 auto 10px auto;
     display: flex;
     justify-content: space-around;
-    background-color:rgba(0, 0, 0, 0.3);
+    background-color:rgba(0, 0, 0, 0.4);
     align-items:center;
+    border-radius:15px/15px;
 }
 
 .second__word,
@@ -485,11 +486,11 @@ display: flex;
 }
 
 .symbol__item { 
-    font-family: 'Wendy One', sans-serif;    
+    font-family: 'Baloo 2', cursive;
     color:rgba(255, 255, 255,1);
     position: relative;
     font-size: 3em;
-    font-weight: 100;
+    font-weight: 900;
     text-align: center;
     padding: 7px ;
     text-shadow: -3px 3px 7px rgba(0,0,0,0.7);
@@ -647,7 +648,7 @@ rgba(38, 60, 116, 1) */
     margin: 20px 0;
 }
 .booking__step__text {
-    font-family: 'Wendy One', sans-serif;    
+    font-family: 'Baloo 2', cursive;
 letter-spacing: 2px;
  text-align: center;
  padding: 20px; 
@@ -1113,7 +1114,7 @@ position: relative;
    border-top: 3px solid rgba(0,0,0,0.7);
   }
   .tour__link{
-    font-family: 'Lato', sans-serif;  
+    font-family: 'Montserrat', sans-serif; 
     position: relative;
     display: flex;
     justify-content: center;
@@ -1239,15 +1240,20 @@ width: 270px;
 .country__tour__link {
     color:rgba(255, 255, 255, 1);
 }
-.side__bar.row {
+/* .side__bar.row {
     position: absolute;
     width: 15%;
     left: 0;
     top: 100px;
     margin: 0;
-}
+} */
 .countries__cards__list {
-    padding: 15px;
+    /* padding: 15px; */
+    position: absolute;
+    width: 15%;
+    left: 0;
+    top: 100px;
+    margin: 0;
 }
 .countries__cards__title {
 }
@@ -1349,7 +1355,7 @@ width: 270px;
 .modal__login h3{
     color:rgba(231, 220, 74, 1);
     font-size: 1.5em;
-     font-family: 'Wendy One', sans-serif;  
+     font-family: 'Montserrat', sans-serif;
      font-weight: 100;
      letter-spacing: 1px;  
      background-color: rgba(255, 255, 255, 0.2);

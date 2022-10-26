@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
         findTravelBackgroundsVertical = ["15","16","17","18","19","20","21","22","23","24",
         ],
         countriesInfos=document.querySelectorAll('.country__info'),
-        countriesList=document.querySelector('.countries__cards__list'),
+        countriesList=document.querySelector('.countries'),
         countriesLinks=document.querySelectorAll('.country__card__link '),
         modalLogin=document.querySelector('.modal__login'),
         tourItemBGs=["img\\contentpic\\0.jpg","img\\contentpic\\1.jpg"];
@@ -106,6 +106,25 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     };
 
+    function selectCountryInfo(){
+      if(!navLinks[2].classList.contains('active')){
+        hideAllItems(countriesInfos);
+               showItem(countriesInfos,0);
+               countriesList.addEventListener('click',(event)=>{
+               let target=event.target;
+               event.preventDefault();
+                 countriesLinks.forEach((countriesLink,j)=>{
+                   if(target===countriesLink){
+                     console.log(j);
+                     hideAllItems(countriesInfos);
+                     showItem(countriesInfos,j);
+                   }
+                 });
+              });
+      }
+    }
+    
+    selectCountryInfo();
         ////////////////////////////////
         //Header-halfs
         window.addEventListener("scroll", checkHeaderHalfs);
@@ -127,8 +146,6 @@ window.addEventListener("DOMContentLoaded", () => {
           });
           
         }
-
-
 
         function changeBackground(i,height){
           findTravel.style.cssText=`background:url("img/bg${i}.png") no-repeat 100% 100%;
@@ -203,26 +220,33 @@ window.addEventListener("DOMContentLoaded", () => {
                  hideAllItems(mainContents);
                  showItem(mainContents,i);
                 }
-              else if(i===3){
-                showItem(mainContents,3);
-        hideAllItems(countriesInfos);
-        showItem(countriesInfos,0);
-        countriesList.addEventListener('click',(event)=>{
-          let target=event.target;
-          if(mainContents[2].classList.contains('show')){
-            console.log('hye');
-            countriesLinks.forEach((countriesLink,j)=>{
-              if(target===countriesLink ){
+             /*  else if(i===3){
+               let countriesInfos=document.querySelectorAll('.country__info'),
+        countriesList=document.querySelector('.countries'),
+        countriesLinks=document.querySelectorAll('.country__card__link ');
+                
+                showItem(mainContents,i);
                 hideAllItems(countriesInfos);
-                showItem(countriesInfos,j);
-               }
-             });
-          }
-       });
-              }  
+                showItem(countriesInfos,0);
+                countriesList.addEventListener('click',(event)=>{
+                let target=event.target;
+                event.preventDefault();
+               
+                  countriesLinks.forEach((countriesLink,j)=>{
+                    if(target===countriesLink){
+                      console.log(j);
+                    
+                      hideAllItems(countriesInfos);
+                      showItem(countriesInfos,j);
+                    }
+                  });
+               });
+              }  */ 
             });
         });
 
+
+        console.log(mainContents);
 
         ////////////////////////////////
         //Section-slide
@@ -476,7 +500,35 @@ window.addEventListener("DOMContentLoaded", () => {
         });
 
 
+       
 
+
+   
+
+
+
+
+
+           
+
+ /*  console.log('hye'); */
+
+/*  showItem(mainContents,i); */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         
 /* 
 
         let cardCreateButton=document.getElementById('create__tour__card'),
