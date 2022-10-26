@@ -76,7 +76,7 @@ body{
     height: 50px;
     padding: 0;
     width: 100%;
-    background-color: rgba(255,255,255, 0.3);
+    background-color: rgba(255,255,255, 0.5);
     margin: 10px;
 }
 
@@ -442,9 +442,9 @@ display: flex;
 .find__travel__slogan {
    display: inline-flex;
     max-width: 80%;
-    font-size: 1em;
-    text-shadow: 3px 0 3px rgba(0,0,0,1);
-     letter-spacing: 5px; 
+    font-size: 1.2em;
+    text-shadow: 2px -2px 2px rgba(0,0,0,1);
+     letter-spacing: 7px; 
     text-transform: uppercase;
     padding:5px;
     font-weight: 900;
@@ -462,9 +462,9 @@ display: flex;
     margin: 0 auto 10px auto;
     display: flex;
     justify-content: space-around;
-    background-color:rgba(0, 0, 0, 0.4);
+  /*   background-color:rgba(0, 0, 0, 0.4); */
     align-items:center;
-    border-radius:15px/15px;
+    /* border-radius:15px/15px; */
 }
 
 .second__word,
@@ -493,7 +493,7 @@ display: flex;
     font-weight: 900;
     text-align: center;
     padding: 7px ;
-    text-shadow: -3px 3px 7px rgba(0,0,0,0.7);
+    text-shadow: 2px -2px 2px rgba(0,0,0,1);
     margin: 0px auto;
     transform:translateX(0) ;
     transition: all 1s ease-in-out;
@@ -553,7 +553,7 @@ display: flex;
    display: flex;
    flex-wrap: wrap;
    
-   padding: 25px 25px 50px 25px;
+   padding: 25px ;
 }
 
 .achievment:nth-of-type(2){
@@ -1156,6 +1156,7 @@ width: 270px;
 .country__info{
     flex-direction: column;
     row-gap: 25px;
+    margin-left: 15%;
 }
 
 .countries {
@@ -1194,11 +1195,12 @@ width: 270px;
     flex-wrap: wrap;
     gap: 15px;
     flex-direction: row;
+    padding: 15px;
 }
 .place__of__interest__item {
     flex: 1 1 100%;
     border:1px solid rgba(0, 0, 0, 0.5);
-
+    padding: 15px;
 }
 .place__of__interest__content {
 }
@@ -1208,7 +1210,7 @@ width: 270px;
 }
 .short__history {
     border:1px solid rgba(0, 0, 0, 0.5);
-
+    padding: 15px;
 }
 .short__history__title {
 }
@@ -1219,11 +1221,12 @@ width: 270px;
     flex-wrap: wrap;
     gap: 15px;
     flex-direction: row;
-
+    padding: 15px;
 }
 .souvenir__item {
     flex: 1 1 100%;
     border:1px solid rgba(0, 0, 0, 0.5);
+    padding: 15px;
 }
 .souvenir {
 }
@@ -1232,6 +1235,7 @@ width: 270px;
     display: flex;
     gap: 15px;
     flex-direction: column;
+    padding: 15px;
 }
 .country__tour__item {
     flex: 1 1 100%;
@@ -1239,6 +1243,7 @@ width: 270px;
 }
 .country__tour__link {
     color:rgba(255, 255, 255, 1);
+    padding: 15px;
 }
 /* .side__bar.row {
     position: absolute;
