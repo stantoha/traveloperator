@@ -1145,18 +1145,27 @@ width: 270px;
 .countries.container-fluid {
    padding: 0;
     padding-top: 110px;
+min-height: 100vw;
+   display: flex;
+   align-items:baseline;
+   flex-direction: row;
 }
 .country__info.row {
-    padding-left: 15%;
-    width: 100%;
-   margin: 0;
-   border:1px solid rgba(0, 0, 0, 0.5);
+  /*   position: relative; */
+    /* top: 0; */
+   /*  margin-left: 20%;
+    width: 80%;
+   border:1px solid rgba(0, 0, 0, 0.5); */
 }
 
 .country__info{
+    margin-left: 10%;
+    width: 100%;
+   border:1px solid rgba(0, 0, 0, 0.5);
+    min-height: 100vw;
     flex-direction: column;
     row-gap: 25px;
-    margin-left: 15%;
+   color:rgba(0, 0, 0, 1);
 }
 
 .countries {
@@ -1182,6 +1191,8 @@ width: 270px;
 
 .country__basic__info__item {
     flex: 1 1 50%;
+    display: flex;
+    gap: 10px;
 }
 .country__basic__info__item p{
     letter-spacing: 2px;
@@ -1193,20 +1204,29 @@ width: 270px;
     border:1px solid rgba(0, 0, 0, 0.5);
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+   /*  gap: 15px; */
     flex-direction: row;
     padding: 15px;
 }
 .place__of__interest__item {
-    flex: 1 1 100%;
+    flex: 1 1 auto;
     border:1px solid rgba(0, 0, 0, 0.5);
-    padding: 15px;
+    margin: 0 auto;
 }
 .place__of__interest__content {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 15px;
+    gap: 10px;
 }
 .place__of__interest__descr {
+    padding: 15px;
+    text-align: justify;
 }
 .place__of__interest__image {
+    max-width: 340px;
+    height: auto;
 }
 .short__history {
     border:1px solid rgba(0, 0, 0, 0.5);
@@ -1253,19 +1273,20 @@ width: 270px;
     margin: 0;
 } */
 .countries__cards__list {
-    /* padding: 15px; */
-    position: absolute;
+    position: fixed;
     width: 15%;
-    left: 0;
+    left: 0px;
     top: 100px;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
 }
 .countries__cards__title {
 }
 .countries__cards__item {
 }
 .country__card__link {
-    color:rgba(255, 255, 255, 1);
+    color:rgba(0, 0, 0, 1);
+    font-weight: 900;
     letter-spacing: 1px;
     text-decoration: none;
 }

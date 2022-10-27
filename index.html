@@ -561,33 +561,35 @@
          <div class="main__content col-12">
             <div class="countries container-fluid ">
 
-              <div class="country__info">
-                <h4 class="country__name col-12 text-center">Albania</h4>
+              <template id="country__info__template" >
+                <figure class="country__name col-12 text-center">
+                  <figcaption></figcaption>
+                  
+                   
+                    <img src="" width="150" height="100" alt="">
                 
-                  <img src="" alt=""  class="country__title__image text-center col-12 m-auto">
-      
+                </figure>
+                
                   <ul class="country__basic__info__list col-12 m-auto p-4">
                     <li class="country__basic__info__title section__title col-12">
                         Basic Info
                     </li>
                     <li class="country__basic__info__item">
-                      <p>Population: <span></span></p>
+                      Population:<p class="population"> </p>
                     </li>
                     <li class="country__basic__info__item">
-                       <p>Language:<span></span></p>
+                      Language:<p class="language"></p>
                     </li>
                     <li class="country__basic__info__item">
-                      <p>Main cities:<span></span></p>
+                      Main cities:<p class="main__cities"></p>
                     </li>
                     <li class="country__basic__info__item">
-                      <p>Well-known people:<span></span></p>
+                      Well-known people:<p class="well__known"></p>
                     </li>
                     <li class="country__basic__info__item">
-                      <p>Currency:<span></span></p>
+                      Currency:<p class="currency"></p>
                     </li>
-                    <li class="country__basic__info__item">
-                      <p>Flag:<span></span></p>
-                    </li>
+                    
                   </ul>
       
                   <ul class="places__of__interest__list col-12">
@@ -595,50 +597,14 @@
                       Places Of Interest:
                     </li>
 
-                    <li class="place__of__interest__item col-12  col-sm-2  mr-auto">
+                    <!-- <li class="place__of__interest__item col-12  col-sm-2  mr-auto">
                       <figure class="place__of__interest__content col-12">
                         <figcaption class="place__of__interest__descr col-12  col-sm-2  mr-auto">
-                           some text about place of interest
+                           
                         </figcaption>
                       </figure>
                       <img src="" class="place__of__interest__image col-12  col-sm-2  mr-auto" width="300" height="300"   alt="#">
-                    </li>
-
-                    <li class="place__of__interest__item col-12  col-sm-2  mr-auto">
-                      <figure class="place__of__interest__content col-12">
-                        <figcaption class="place__of__interest__descr col-12  col-sm-2  mr-auto">
-                           some text about place of interest
-                        </figcaption>
-                      </figure>
-                      <img src="" class="place__of__interest__image col-12  col-sm-2  mr-auto" width="300" height="300"   alt="#">
-                    </li>
-
-                    <li class="place__of__interest__item col-12  col-sm-2  mr-auto">
-                      <figure class="place__of__interest__content col-12">
-                        <figcaption class="place__of__interest__descr col-12  col-sm-2  mr-auto">
-                           some text about place of interest
-                        </figcaption>
-                      </figure>
-                      <img src="" class="place__of__interest__image col-12  col-sm-2  mr-auto" width="300" height="300"   alt="#">
-                    </li>
-
-                    <li class="place__of__interest__item col-12  col-sm-2  mr-auto">
-                      <figure class="place__of__interest__content col-12">
-                        <figcaption class="place__of__interest__descr col-6">
-                           some text about place of interest
-                        </figcaption>
-                      </figure>
-                      <img src="" class="place__of__interest__image col-12  col-sm-2  mr-auto" width="300" height="300"   alt="#">
-                    </li>
-
-                    <li class="place__of__interest__item col-12  col-sm-2  mr-auto">
-                      <figure class="place__of__interest__content col-12">
-                        <figcaption class="place__of__interest__descr col-6">
-                           some text about place of interest
-                        </figcaption>
-                      </figure>
-                      <img src="" class="place__of__interest__image col-12  col-sm-2  mr-auto" width="300" height="300"   alt="#">
-                    </li>
+                    </li> -->
 
                   </ul>
       
@@ -646,52 +612,22 @@
                     <p class="short__history__title section__title">
                       History in brief
                     </p>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                     Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet.
-                      Porro, delectus?
-                    </p>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                     Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet.
-                      Porro, delectus?Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                       Esse iste laudantium quod, eveniet a nostrum ut voluptas quo tenetur! Accusantium libero dolores non iure quos ad velit molestiae eos voluptate?
-                    </p>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                     Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet.
-                      Porro, delectus?
-                    </p>
+                    <p class="short__history__text"></p>
                     </article>
       
                   <ol class="souvenirs__list col-12">
                     <li class="short__history__title section__title col-12">
                       Popular souvenirs:
                   </li>
-                    <li class="souvenir__item col-12 col-sm-3 mr-auto">
-                      <figure class="souvenir">
-                        <img src="" width="150" height="150" alt="#">
-                        <figcaption>
+                    <!-- <li class="souvenir__item col-12 col-sm-3 mr-auto">
+                      <figure class="souvenir__content">
+                        <img class="souvenir__image" src=""  alt="#">
+                        <figcaption class="souvenir__descr">
                           text about some souvenir
                         </figcaption>
                       </figure>
-                    </li>
-                    <li class="souvenir__item col-12 col-sm-3 mr-auto">
-                      <figure class="souvenir">
-                        <img src="" width="150" height="150" alt="#">
-                        <figcaption>
-                          text about some souvenir
-                        </figcaption>
-                      </figure>
-                    </li>
-                    <li class="souvenir__item col-12 col-sm-3 mr-auto">
-                      <figure class="souvenir">
-                        <img src="" width="150" height="150" alt="#">
-                        <figcaption>
-                          text about some souvenir
-                        </figcaption>
-                      </figure>
-                    </li>
+                    </li> -->
+                    
                   </ol>
       
                   <ol class="country__tours__list col-12">
@@ -721,177 +657,9 @@
                       </a>
                   </li>
                   </ol>
-              </div>
+              </template>
       
-              <div class="country__info">
-                <h4 class="country__name">Andorra</h4>
-                
-                  <img src="" alt="" class="country__title__image">
-      
-                  
-                
-                  
-                  <p class="country__basic__info">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                     Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-                  </p>
-      
-                  <ul class="places__of__interest">
-                    <li class="place__of__interest"></li>
-                    <li class="place__of__interest"></li>
-                    <li class="place__of__interest"></li>
-                    <li class="place__of__interest"></li>
-                    <li class="place__of__interest"></li>
-                  </ul>
-      
-                  <p class="short__history">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                     Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-                  </p>
-      
-                  <ol class="souvenirs__list">
-                    <li class="souvenir"></li>
-                    <li class="souvenir"></li>
-                    <li class="souvenir"></li>
-                  </ol>
-      
-                  <ol class="our__tour__links__list">
-                    <li class="our__tour__item">
-                      <a href="" class="our__tour__item__link">
-      
-                      </a>
-                    </li>
-                  </ol>
-      
-              </div>
-      
-              <div class="country__info">
-                <h4 class="country__name">Ausrtia</h4>
-                
-                  <img src="" alt="" class="country__title__image">
-      
-                  
-                
-                  
-                  <p class="country__basic__info">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                     Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-                  </p>
-      
-                  <ul class="places__of__interest">
-                    <li class="place__of__interest"></li>
-                    <li class="place__of__interest"></li>
-                    <li class="place__of__interest"></li>
-                    <li class="place__of__interest"></li>
-                    <li class="place__of__interest"></li>
-                  </ul>
-      
-                  <p class="short__history">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                     Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-                  </p>
-      
-                  <ol class="souvenirs__list">
-                    <li class="souvenir"></li>
-                    <li class="souvenir"></li>
-                    <li class="souvenir"></li>
-                  </ol>
-      
-                  <ol class="our__tour__links__list">
-                    <li class="our__tour__item">
-                      <a href="" class="our__tour__item__link">
-      
-                      </a>
-                    </li>
-                  </ol>
-      
-              </div>
-      
-              <div class="country__info">
-                <h4 class="country__name">Belarus</h4>
-                
-                  <img src="" alt="" class="country__title__image">
-      
-                  
-                
-                  
-                  <p class="country__basic__info">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                     Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-                  </p>
-      
-                  <ul class="places__of__interest">
-                    <li class="place__of__interest"></li>
-                    <li class="place__of__interest"></li>
-                    <li class="place__of__interest"></li>
-                    <li class="place__of__interest"></li>
-                    <li class="place__of__interest"></li>
-                  </ul>
-      
-                  <p class="short__history">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                     Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-                  </p>
-      
-                  <ol class="souvenirs__list">
-                    <li class="souvenir"></li>
-                    <li class="souvenir"></li>
-                    <li class="souvenir"></li>
-                  </ol>
-      
-                  <ol class="our__tour__links__list">
-                    <li class="our__tour__item">
-                      <a href="" class="our__tour__item__link">
-      
-                      </a>
-                    </li>
-                  </ol>
-      
-              </div>
-      
-              <div class="country__info">
-                <h4 class="country__name">Belgium</h4>
-                
-                  <img src="" alt="" class="country__title__image">
-      
-                  
-                
-                  
-                  <p class="country__basic__info">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                     Autem, perferendis fugit tempore itaque non nemo! Eligendi ullam quidem sit asperiores ab nam dolores ipsa esse delectus, cumque officia officiis ad.
-                  </p>
-      
-                  <ul class="places__of__interest">
-                    <li class="place__of__interest"></li>
-                    <li class="place__of__interest"></li>
-                    <li class="place__of__interest"></li>
-                    <li class="place__of__interest"></li>
-                    <li class="place__of__interest"></li>
-                  </ul>
-      
-                  <p class="short__history">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                     Earum, consequuntur. Quaerat incidunt suscipit cum quasi, beatae culpa natus asperiores omnis vitae, voluptate tempora eaque, repellendus placeat sunt eveniet. Porro, delectus?
-                  </p>
-      
-                  <ol class="souvenirs__list">
-                    <li class="souvenir"></li>
-                    <li class="souvenir"></li>
-                    <li class="souvenir"></li>
-                  </ol>
-      
-                  <ol class="our__tour__links__list">
-                    <li class="our__tour__item">
-                      <a href="" class="our__tour__item__link">
-      
-                      </a>
-                    </li>
-                  </ol>
-      
-              </div>
-      
-              <!--  <div class="side__bar "> -->
+              <div class="country__info"></div>
                 <ul class="countries__cards__list">
       
                   <!-- <li class="countries__cards__title">
@@ -912,7 +680,7 @@
         
                   <li class="countries__cards__item p-2">
                     <a href="" class="country__card__link">
-                    Ausrtia
+                    Austria
                     </a>
                   </li>
         

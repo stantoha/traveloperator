@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
         ],
         findTravelBackgroundsVertical = ["15","16","17","18","19","20","21","22","23","24",
         ],
-        countriesInfos=document.querySelectorAll('.country__info'),
+        countryInfo=document.querySelector('.country__info'),
         countriesList=document.querySelector('.countries'),
         countriesLinks=document.querySelectorAll('.country__card__link '),
         modalLogin=document.querySelector('.modal__login'),
@@ -106,7 +106,7 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     };
 
-    function selectCountryInfo(){
+  /*   function selectCountryInfo(){
       if(!navLinks[2].classList.contains('active')){
         hideAllItems(countriesInfos);
                showItem(countriesInfos,0);
@@ -124,7 +124,138 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     }
     
-    selectCountryInfo();
+    selectCountryInfo(); */
+
+    let countriesNames=['Albania','Andorra','Austria','Belarus','Belgium'],
+    countriesPopulation=['2 793 592','82 887','8 923 507',' 9 255 524','11 521 238'],
+    countriesLanguage=['albanian','catalanian','austrian','belarussian, russian','french, dutch'],
+    countriesCities=['Tirana','Andorra-la-Vellia','Wien, Salzburg, Graz','Minsk, Brest','Bruccels, Brugge, Antverpen'],
+    countriesWellKnown=['Voldemort','Andura','Mozart','Lukashenko','Leopold'],
+    countriesCurrency=['euro','euro','euro','bel rub','euro'],
+    countriesFlag=['img/country__info/albania.png','img/country__info/andorra.png','img/country__info/austria.png',
+    'img/country__info/belarus.png','img/country__info/belgium.png',],
+    countriesPlacesOfInterestQuantity=['1','1','3','2','3'],
+    AlbaniaPOI=[['The clock tower was built by the Ottoman Turks in an Islamic style and with simply a bell from Venice',
+    'img/country__info/places__of__interest/albania/Clock_Tower.jpg']],
+    AndorraPOI=[['La Noblesse du Temps is right at the center of Andoora la Vella and a great spot to take a photo to remember your trip to Andorra.',
+  'img/country__info/places__of__interest/andorra/la-noblesse-du-temps.jpg']],
+    AustriaPOI=[['The beautiful historic center of Vienna is worth a visit. While riding tours allow you to see some great sights in Vienna, a walk through this area is recommended to see the detail of the lovely architecture and statues.',
+  'img/country__info/places__of__interest/austria/wien.jpg'],['You can certainly walk the historic city of Salzburg and take in all the sights',
+'img/country__info/places__of__interest/austria/salzburg.jpg'],
+['Breathtaking views of the Alps and the charming town of Hallstatt.',
+'img/country__info/places__of__interest/austria/hallstatt.jpg']
+    ],
+    BelarusPOI=[["Your visit to Minsk is not complete if you don't have a picture of you taken in front of the gates.",
+  'img/country__info/places__of__interest/belarus/minsk__gates.jpg']],
+  BelgiumPOI=[['The Grand Place is truly that... it was wonderful to be here - easily spent an hour or two just wandering around, observing, sitting with a coffee. Really magnificent and well worth the visit to Brussels for.',
+'img/country__info/places__of__interest/belgium/grand-place.jpg'],
+  ['Ghent City Centre is a delight and compact enough to see all the main sights on foot.','img/country__info/places__of__interest/belgium/gent.jpg'],
+['You are able to take a breather, if the person behind you is patient, and the stairs can be steep in sections.','img/country__info/places__of__interest/belgium/brugge.jpg']],
+countryPOI=[AlbaniaPOI, AndorraPOI, AustriaPOI,BelarusPOI,BelgiumPOI],
+countryHistories=['Albania, country in southern Europe, located in the western part of the Balkan Peninsula on the Strait of Otranto, the southern entrance to the Adriatic Sea. The capital city is Tirana (Tiranë).','Andorra, small independent European coprincipality situated among the southern peaks of the Pyrenees Mountains and bounded by France to the north and east and by Spain to the south and west. It is one of the smallest states in Europe. The capital is Andorra la Vella.',
+'Austria, largely mountainous landlocked country of south-central Europe. Together with Switzerland, it forms what has been characterized as the neutral core of Europe, notwithstanding Austria’s full membership since 1995 in the supranational European Union (EU).',
+'Belarus, country of eastern Europe. Until it became independent in 1991, Belarus, formerly known as Belorussia or White Russia, was the smallest of the three Slavic republics included in the Soviet Union (the larger two being Russia and Ukraine).',
+'Belgium, country of northwestern Europe. It is one of the smallest and most densely populated European countries, and it has been, since its independence in 1830, a representative democracy headed by a hereditary constitutional monarch. Initially, Belgium had a unitary form of government. In the 1980s and ’90s, however, steps were taken to turn Belgium into a federal state with powers shared among the regions of Flanders, Wallonia, and the Brussels-Capital Region.'],
+countrySouvenirsQuantity=['1','1','3','1','1'],
+AlbaniaSouvenirs=['Miniature Bunker Ashtray','img/country__info/souvenirs/albania/miniature-bunker-ashtray.jpg'],
+AndorraSouvenirs=[],
+AustriaSouvenirs=[['Crystal products from Swarovski are considered as a treasure of Austria, extremely famous all over the world, more popular than gold and second only to diamonds.',
+'img/country__info/souvenirs/austria/svarovski.jpg'],
+['Austria is a famous country when it comes to owning many cafes with delicious flavors.','img/country__info/souvenirs/austria/austrian-coffee.jpg'],
+['At the Augarten porcelain factory, ceramic lovers from all over the world will find the perfect display for their beloved home or elegant tableware for the perfect dinner party.',
+'img/country__info/souvenirs/austria/Porcelain.jpg']],
+BelarusSouvenirs=[['Souvenirs from straws are very popular in Belarus. They give coziness and in the cold season remind us of the warm sun',
+'img/country__info/souvenirs/belarus/suvenir_solomka.jpg']],
+BelgiumSouvenirs=[['Bringing back chocolate from Belgium is an obvious choice, so if you’re going to pick up a box, you’ll want something rare and unexpected.','img/country__info/souvenirs/belgium/choclate.jpg']],
+countrySouvenirsList=[AlbaniaSouvenirs,AndorraSouvenirs,AustriaSouvenirs,BelarusSouvenirs,BelgiumSouvenirs];
+    
+
+
+    let countryTemplate=document.querySelector('#country__info__template'),
+        countryTemplateContent=countryTemplate.content,
+        countryBasicInfo=countryTemplateContent.querySelector('.country__basic__info__list'),
+        countryPlacesOfInterest=countryTemplateContent.querySelector('.places__of__interest__list'),
+        countryHistory=countryTemplateContent.querySelector('.short__history'),
+        countrySouvenirs=countryTemplateContent.querySelector('.souvenirs__list');
+        
+
+      /*   <li class="place__of__interest__item col-12  col-sm-2  mr-auto">
+                      <figure class="place__of__interest__content col-12">
+                        <figcaption class="place__of__interest__descr col-12  col-sm-2  mr-auto">
+                           
+                        </figcaption>
+                      </figure>
+                      <img src="" class="place__of__interest__image col-12  col-sm-2  mr-auto" width="300" height="300"   alt="#">
+                    </li> */
+
+
+   
+   let getCountryInfo=function(){
+    let target=event.target;
+   
+      countriesLinks.forEach((countriesLink,i)=>{
+        if(target==countriesLink){
+          countryTemplateContent.children[0].children[0].textContent=countriesNames[i];
+          countryTemplateContent.children[0].children[1].src=countriesFlag[i];
+          countryBasicInfo.children[1].children[0].textContent=countriesPopulation[i];
+          countryBasicInfo.children[2].children[0].textContent=countriesLanguage[i];
+          countryBasicInfo.children[3].children[0].textContent=countriesCities[i];
+          countryBasicInfo.children[4].children[0].textContent=countriesWellKnown[i];
+          countryBasicInfo.children[5].children[0].textContent=countriesCurrency[i];
+
+          for(let j=0;j<countriesPlacesOfInterestQuantity[i];j++){
+            let placeOfInterest=document.createElement('li');
+            placeOfInterest.classList.add('place__of__interest__item','col-lg-4','col-md-6','col-sm-12');
+            placeOfInterest.innerHTML=`<figure class="place__of__interest__content col-12">
+            <figcaption class="place__of__interest__descr">
+               ${((countryPOI[i])[j])[0]}
+            </figcaption>
+            <img src="${((countryPOI[i])[j])[1]}" class="place__of__interest__image"  alt="#">
+          </figure>`;
+          countryPlacesOfInterest.append(placeOfInterest);
+          }
+
+          countryHistory.children[1].textContent=countryHistories[i];
+
+          for(let k=0;k<countrySouvenirsQuantity[i];k++){
+            let souvenir=document.createElement('li');
+            souvenir.classList.add('souvenir__item','col-lg-4','col-md-6','col-sm-12');
+            souvenir.innerHTML=`<figure class="souvenir__content">
+            <img class="souvenir__image" src="${((countrySouvenirsList[i])[k])[1]}"  alt="#">
+            <figcaption class="souvenir__descr">
+            ${((countrySouvenirsList[i])[k])[0]}
+            </figcaption>
+          </figure>`;
+          countrySouvenirs.append(souvenir);
+          }
+
+
+          let shownCountryInfo=countryTemplateContent.cloneNode(true);
+          countryInfo.append(shownCountryInfo);
+        }
+      });
+   };
+
+
+    countriesList.addEventListener('click',(event)=>{
+      event.preventDefault();
+      countryInfo.innerHTML='';
+      countryPlacesOfInterest.innerHTML='';
+      getCountryInfo();
+      
+    });
+
+
+    /* let shownName=countryName.cloneNode(true);
+    shownName.textContent=countriesNames[i];
+    countriesList */
+
+
+   /*  console.log(countryName);
+    console.log(countryPopulation);
+    console.log(countryLanguage);
+    console.log(countryCities); */
+
         ////////////////////////////////
         //Header-halfs
         window.addEventListener("scroll", checkHeaderHalfs);
