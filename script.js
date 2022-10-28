@@ -79,7 +79,7 @@ window.addEventListener("DOMContentLoaded", () => {
          } ,300);
       };
       hideLetters();
-      /* setTimeout(showLetters(),3000); */
+      
       showLetters();
        let hideItem= function(items,i){
           items[i].classList.add('hide');
@@ -106,25 +106,8 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     };
 
-  /*   function selectCountryInfo(){
-      if(!navLinks[2].classList.contains('active')){
-        hideAllItems(countriesInfos);
-               showItem(countriesInfos,0);
-               countriesList.addEventListener('click',(event)=>{
-               let target=event.target;
-               event.preventDefault();
-                 countriesLinks.forEach((countriesLink,j)=>{
-                   if(target===countriesLink){
-                     console.log(j);
-                     hideAllItems(countriesInfos);
-                     showItem(countriesInfos,j);
-                   }
-                 });
-              });
-      }
-    }
     
-    selectCountryInfo(); */
+  
 
     let countriesNames=['Albania','Andorra','Austria','Belarus','Belgium'],
     countriesPopulation=['2 793 592','82 887','8 923 507',' 9 255 524','11 521 238'],
@@ -134,6 +117,7 @@ window.addEventListener("DOMContentLoaded", () => {
     countriesCurrency=['euro','euro','euro','bel rub','euro'],
     countriesFlag=['img/country__info/albania.png','img/country__info/andorra.png','img/country__info/austria.png',
     'img/country__info/belarus.png','img/country__info/belgium.png',],
+
     countriesPlacesOfInterestQuantity=['1','1','3','2','3'],
     AlbaniaPOI=[['The clock tower was built by the Ottoman Turks in an Islamic style and with simply a bell from Venice',
     'img/country__info/places__of__interest/albania/Clock_Tower.jpg']],
@@ -152,13 +136,14 @@ window.addEventListener("DOMContentLoaded", () => {
   ['Ghent City Centre is a delight and compact enough to see all the main sights on foot.','img/country__info/places__of__interest/belgium/gent.jpg'],
 ['You are able to take a breather, if the person behind you is patient, and the stairs can be steep in sections.','img/country__info/places__of__interest/belgium/brugge.jpg']],
 countryPOI=[AlbaniaPOI, AndorraPOI, AustriaPOI,BelarusPOI,BelgiumPOI],
+
 countryHistories=['Albania, country in southern Europe, located in the western part of the Balkan Peninsula on the Strait of Otranto, the southern entrance to the Adriatic Sea. The capital city is Tirana (Tiranë).','Andorra, small independent European coprincipality situated among the southern peaks of the Pyrenees Mountains and bounded by France to the north and east and by Spain to the south and west. It is one of the smallest states in Europe. The capital is Andorra la Vella.',
 'Austria, largely mountainous landlocked country of south-central Europe. Together with Switzerland, it forms what has been characterized as the neutral core of Europe, notwithstanding Austria’s full membership since 1995 in the supranational European Union (EU).',
 'Belarus, country of eastern Europe. Until it became independent in 1991, Belarus, formerly known as Belorussia or White Russia, was the smallest of the three Slavic republics included in the Soviet Union (the larger two being Russia and Ukraine).',
 'Belgium, country of northwestern Europe. It is one of the smallest and most densely populated European countries, and it has been, since its independence in 1830, a representative democracy headed by a hereditary constitutional monarch. Initially, Belgium had a unitary form of government. In the 1980s and ’90s, however, steps were taken to turn Belgium into a federal state with powers shared among the regions of Flanders, Wallonia, and the Brussels-Capital Region.'],
 countrySouvenirsQuantity=['1','1','3','1','1'],
 AlbaniaSouvenirs=['Miniature Bunker Ashtray','img/country__info/souvenirs/albania/miniature-bunker-ashtray.jpg'],
-AndorraSouvenirs=[],
+AndorraSouvenirs=['You can find custom designed pieces with Tahitian pearls, and he also is exclusive distributor for outstanding Faberge...','img/country__info/souvenirs/andorra/champagne.jpg'],
 AustriaSouvenirs=[['Crystal products from Swarovski are considered as a treasure of Austria, extremely famous all over the world, more popular than gold and second only to diamonds.',
 'img/country__info/souvenirs/austria/svarovski.jpg'],
 ['Austria is a famous country when it comes to owning many cafes with delicious flavors.','img/country__info/souvenirs/austria/austrian-coffee.jpg'],
@@ -178,16 +163,6 @@ countrySouvenirsList=[AlbaniaSouvenirs,AndorraSouvenirs,AustriaSouvenirs,Belarus
         countryHistory=countryTemplateContent.querySelector('.short__history'),
         countrySouvenirs=countryTemplateContent.querySelector('.souvenirs__list');
         
-
-      /*   <li class="place__of__interest__item col-12  col-sm-2  mr-auto">
-                      <figure class="place__of__interest__content col-12">
-                        <figcaption class="place__of__interest__descr col-12  col-sm-2  mr-auto">
-                           
-                        </figcaption>
-                      </figure>
-                      <img src="" class="place__of__interest__image col-12  col-sm-2  mr-auto" width="300" height="300"   alt="#">
-                    </li> */
-
 
    
    let getCountryInfo=function(){
@@ -219,7 +194,7 @@ countrySouvenirsList=[AlbaniaSouvenirs,AndorraSouvenirs,AustriaSouvenirs,Belarus
 
           for(let k=0;k<countrySouvenirsQuantity[i];k++){
             let souvenir=document.createElement('li');
-            souvenir.classList.add('souvenir__item','col-lg-4','col-md-6','col-sm-12');
+            souvenir.classList.add('souvenir__item','col-lg-3','col-md-5','col-sm-12');
             souvenir.innerHTML=`<figure class="souvenir__content">
             <img class="souvenir__image" src="${((countrySouvenirsList[i])[k])[1]}"  alt="#">
             <figcaption class="souvenir__descr">
@@ -241,20 +216,13 @@ countrySouvenirsList=[AlbaniaSouvenirs,AndorraSouvenirs,AustriaSouvenirs,Belarus
       event.preventDefault();
       countryInfo.innerHTML='';
       countryPlacesOfInterest.innerHTML='';
+      countrySouvenirs.innerHTML='';
       getCountryInfo();
       
     });
 
 
-    /* let shownName=countryName.cloneNode(true);
-    shownName.textContent=countriesNames[i];
-    countriesList */
 
-
-   /*  console.log(countryName);
-    console.log(countryPopulation);
-    console.log(countryLanguage);
-    console.log(countryCities); */
 
         ////////////////////////////////
         //Header-halfs
@@ -317,27 +285,11 @@ countrySouvenirsList=[AlbaniaSouvenirs,AndorraSouvenirs,AustriaSouvenirs,Belarus
         changeBackgroundTimer(1);
 
 
-    /*   function showNavBtn(){
-        if(document.documentElement.clientWidth<860){
-          navBtn.style.cssText='display:block;position:relative;';
-          nav.classList.add('slide__right');
-        }
-      }
-        
-      showNavBtn(); */
+    
         //Nav-menu
 
         let navBtn=document.querySelector('.nav__btn');
-        navBtn.addEventListener('click',function(){
-          navBtn.classList.toggle('nav__btn__transform');
-          if(!(nav.classList.contains('slide__right'))){
-          nav.classList.add('slide__right');
-          
-          }
-          else{
-            nav.classList.remove('slide__right');
-          }
-        });
+      
 
         hideAllItems(mainContents);
         showItem(mainContents,0);
@@ -351,32 +303,33 @@ countrySouvenirsList=[AlbaniaSouvenirs,AndorraSouvenirs,AustriaSouvenirs,Belarus
                  hideAllItems(mainContents);
                  showItem(mainContents,i);
                 }
-             /*  else if(i===3){
-               let countriesInfos=document.querySelectorAll('.country__info'),
-        countriesList=document.querySelector('.countries'),
-        countriesLinks=document.querySelectorAll('.country__card__link ');
-                
-                showItem(mainContents,i);
-                hideAllItems(countriesInfos);
-                showItem(countriesInfos,0);
-                countriesList.addEventListener('click',(event)=>{
-                let target=event.target;
-                event.preventDefault();
-               
-                  countriesLinks.forEach((countriesLink,j)=>{
-                    if(target===countriesLink){
-                      console.log(j);
-                    
-                      hideAllItems(countriesInfos);
-                      showItem(countriesInfos,j);
-                    }
-                  });
-               });
-              }  */ 
+           
             });
         });
+        function showNavBtn(){
+          if(document.documentElement.clientWidth<860){
+          /*   navBtn.classList.remove('slide__right'); */
+            nav.classList.add('slide__right');
+            console.log('hye');
+          }
+          else {
+            navBtn.classList.add('slide__right');
+           
+          }
+          
+        }
+          
+        showNavBtn();
 
-
+        navBtn.addEventListener('click',function(){
+          navBtn.classList.toggle('nav__btn__transform');
+          if(!(nav.classList.contains('slide__right'))){
+          nav.classList.add('slide__right');
+          }
+          else{
+            nav.classList.remove('slide__right');
+          }
+        });
         console.log(mainContents);
 
         ////////////////////////////////

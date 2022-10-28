@@ -62,7 +62,7 @@ body{
     padding: 0;
     background-color:rgba(0, 0, 0, 0.2);         
     color:rgba(255,255,255, 1);
-    font-family: 'Montserrat', sans-serif;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    font-family: 'Open Sans', sans-serif;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 }
 
 
@@ -111,19 +111,17 @@ body{
 }
 
   .section__title{
-    font-family: 'Baloo 2', cursive;
-    font-size: 1.2em;
+    font-family: 'Bubblegum Sans', cursive;
+   /*  Merriweather */
+    font-size: 1.5em;
     text-align: center;
     max-width: 50%;
     padding:10px;
-    margin:10px 25% 20px 25%;
+    margin:10px 25%;
     font-weight: 100;
-    letter-spacing: 5px;
+    letter-spacing: 7px;
     text-transform: uppercase;
     text-shadow:1px 1px 2px rgba(0,0,0,1);
-    background-color: rgba(255,255,255,0.1);
-   /*  border-bottom:4px solid rgba(255,255,255,0.5);
-    border-top:4px solid rgba(255,255,255,0.5); */
 }
 
 
@@ -208,31 +206,18 @@ display: flex;
 }
 .title {
     width:  100%;
-    font-family: 'Baloo 2', cursive;
+    font-family: 'Bubblegum Sans', cursive;
     font-size: 1.2em;
     color:rgba(231, 220, 74, 1);
 }
 .header__subtitle {
     width:  100%;
     font-size: 0.7em;
-    font-weight: 900;
+    font-weight: 500;
     color:rgba(255, 255, 255, 1);
 }
 
-/* .header__tel{
-    display: flex;
-    justify-content: center;
-    align-items:center;
- flex-direction: column;
- padding: 2px;
 
-}
-.header__tel {
-    color:rgba(255, 255, 255, 1);
-    font-size: 0.7rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-} */
 
 .phone__number{
     margin: 0;
@@ -278,14 +263,13 @@ display: flex;
     justify-content: center;
 }
 .nav__btn{
-    display: none;
     position: absolute;
     width: 50px;
     height: 50px;
     cursor: pointer;
     z-index: 1;
     top: 0;
-    right: 30px;
+    right: 40px;
   }
   
 .nav__btn > span,
@@ -385,13 +369,12 @@ display: flex;
 .main.row{
     position: relative;
     overflow: hidden;
-/*     max-width: 1720px;
- */   width: 100%;
+    max-width: 1720px;
+   width: 100%;
     margin: 0;
     padding: 0;
     height:auto;
-/*     padding-top: 60px;
- */}
+}
 
 .main__content{
     width: 100%;
@@ -486,7 +469,7 @@ display: flex;
 }
 
 .symbol__item { 
-    font-family: 'Baloo 2', cursive;
+    font-family: 'Bubblegum Sans', cursive;
     color:rgba(255, 255, 255,1);
     position: relative;
     font-size: 3em;
@@ -538,7 +521,7 @@ display: flex;
    text-align: center;
    padding:20px;
    background-color:rgba(0,0,0,0.5);
-   margin: 0px;
+   gap: 10px;
 }
 .achievments__list__title {
    
@@ -552,8 +535,7 @@ display: flex;
     box-shadow:0px 1px 1px rgba(0,0,0,1);
    display: flex;
    flex-wrap: wrap;
-   
-   padding: 25px ;
+   padding: 10px ;
 }
 
 .achievment:nth-of-type(2){
@@ -638,23 +620,47 @@ rgba(38, 60, 116, 1) */
 }
 
 .booking__step {
-    /* border:1px solid rgba(0,0,0,0.2); */
-     min-height: 300px;
+    padding: 15px;
+     min-height: 200px;
      box-shadow:0px 0px 7px rgba(255, 255, 255, 1);
-     background-color:rgba(188, 212, 211, 1);
+     color:rgba(0, 0, 0, 1);
 }
 
-.booking__step__title {
-    margin: 20px 0;
+.booking__step__number {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+   font-size: 1.5em;
+   padding: 10px;
 }
 .booking__step__text {
-    font-family: 'Baloo 2', cursive;
+    font-family: 'Bubblegum Sans', cursive;
 letter-spacing: 2px;
  text-align: center;
+ text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
  padding: 20px; 
- font-size: 1.5em;
- font-weight: 200;
+ font-size: 2em;
+ font-weight: 900;
+ padding: 10px;
 }
+
+.booking__step:nth-of-type(2){
+    color:rgba(188, 212, 211, 1);
+}
+
+.booking__step:nth-of-type(4){
+    color:rgba(161, 190, 151, 1);
+}
+
+.booking__step:nth-of-type(3){
+    color:rgba(158, 144, 86, 1);
+}
+
+/* rgba(158, 144, 86, 1)
+rgba(188, 212, 211, 1)
+rgba(231, 220, 74, 1)
+rgba(161, 190, 151, 1)
+rgba(38, 60, 116, 1) */
 .booking__consult__link{
     padding: 20px; 
 }
@@ -701,16 +707,14 @@ letter-spacing: 2px;
 .travel__ways__list {
     width: auto;
     padding: 20px;
-
-
 }
-.travel__ways__list  .bg{
+.travel__ways__list .bg{
     position: absolute;
     z-index: 10;
     width: 100%;
-    top: 100px;
+    /* top: 100px; */
     left: 0;
-    height: 60vh;
+    height: 35vh;
     margin: 15vh auto;
     background-color:rgba(0,0,0,0.6);
 }
@@ -768,10 +772,8 @@ letter-spacing: 2px;
 /*______________________________________________*/
 
 .tour__card.container-fluid{
-    margin:0px 0;
-    padding:0;
-    box-shadow:0 0 10px rgba(0,0,0,0.5);
-
+    margin:20px 0px 0px 0px;
+    padding:10px;
 }
 
 
@@ -779,15 +781,23 @@ letter-spacing: 2px;
   
 /* card__title */
 /*______________________________________________*/
-
-.card__title {
+.card__title__box{
     text-align: center;
+    display: flex;
+    align-items:center;
+    padding: 10px;
+}
+.card__title {
+    color:rgba(0, 0, 0, 1);
+    font-family: 'Bubblegum Sans', cursive;
 }
 .tour__name {
     font-size: 2em;
-letter-spacing: 5px;}
+letter-spacing: 5px;
+}
 .tour__duration {
-    font-size: 0.7em;
+    font-size: 1em;
+    letter-spacing: 3px;
 }
 
 
@@ -797,10 +807,10 @@ letter-spacing: 5px;}
 /*______________________________________________*/
 
 .basic__info {
-    font-size: 0.7em;
+    font-size: 1em;
 }
 .route {
- 
+    padding: 10px;
 }
 .route__list,
 .countries__visited__list,
@@ -814,12 +824,14 @@ letter-spacing: 5px;}
 }
 .route__point__title {
 }
-.route__point,
-.type__item,
-.countries__visited__item {
-    padding: 3px;
+.route__point a,
+.type__item a,
+.countries__visited__item a{
+    color:rgba(255, 255, 255, 1);
+    padding: 5px;
 }
 .countries__visited {
+    padding: 10px;
 }
 .countries__visited__list {
 }
@@ -828,6 +840,7 @@ letter-spacing: 5px;}
 .countries__visited__item {
 }
 .type {
+    padding: 10px;
 }
 .type__list {
 }
@@ -842,6 +855,7 @@ letter-spacing: 5px;}
 /*______________________________________________*/
 
 .description__block {
+    
 }
 .block__description {
     overflow: hidden;
@@ -858,6 +872,7 @@ letter-spacing: 5px;}
 .descr__content {
     flex: 0 1 70%;
     margin: 10px auto;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .descr__title {
     
@@ -865,11 +880,12 @@ letter-spacing: 5px;}
 .item__title {
 }
 .descr__text {
-    padding: 20px;
+    padding: 10px;
     font-size: 1.2em;
     text-align: justify;
     line-height: 1.6;
     margin: 20px auto;
+    letter-spacing: 1px;
 }
 
 
@@ -878,23 +894,35 @@ letter-spacing: 5px;}
 /* tour__details */
 /*______________________________________________*/
 
-.tour__details {
+.tour__included{
+    padding: 20px;
 }
 .included__list,
 .not__included__list {
-    padding: 5px;
+    padding:20px 15px 30px 15px ;
+    box-shadow:0px 0px 7px rgba(255, 255, 255, 1);
 }
 .included__title,
 .not__included__title {
-    
+    padding: 5px;
+    margin: 0px auto;
 }
 .included__item,
 .not__included__item {
-    padding: 3px;
+    font-size: 1.1em;
+    /* font-weight: 100; */
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 1);
+    font-style: italic;
     list-style: circle;
-    margin-left: 30%;
+    margin: 5px 15%;
 }
-.not__included__list {
+.included__list.section{
+    background-color:rgb(145, 196, 128);
+}
+.not__included__list.section{
+    background-color:rgba(158, 144, 86, 1);
 }
 .not__included__title {
 }
@@ -944,8 +972,16 @@ letter-spacing: 5px;}
     width: 100%;
     padding: 10px;
 }
+
+
+.additional__info{
+    background-color:rgba(0, 0, 0, 0.3);
+}
 .additional__info__list {
-    padding: 5px;
+    margin: 0px 10%;
+    padding:20px 15px 30px 15px ;
+    box-shadow:0px 0px 7px rgba(255, 255, 255, 1);
+    background-color:rgb(160, 216, 213);
     display: flex;
  flex-direction: column;   
 }
@@ -1103,18 +1139,19 @@ option.destination__item {
     justify-content: center;
     align-items:center;
 box-shadow:0px 0px 5px rgba(0,0,0,1 );
-height: 320px;
-width: 270px;
-/* background-color:rgba(0, 0, 0, 0.5); */ 
-
+height: 210px;
+width: 140px;
+border-radius:15px/15px;
 position: relative;
+padding: 15px;
+
   }
 
   .tour__links__list__title{
    border-top: 3px solid rgba(0,0,0,0.7);
   }
   .tour__link{
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Open Sans', sans-serif; 
     position: relative;
     display: flex;
     justify-content: center;
@@ -1125,17 +1162,14 @@ position: relative;
    /*  position: absolute;
     top: 10px;
     left: 80px; */
-    padding: 15px;
     color:rgba(255,255,255,1);
     text-shadow: 0 0 2px rgba(0,0,0,0.5);
     font-size: 1.7em;
     letter-spacing: 5px;
     text-decoration: none;
     font-weight: 900;
-   /*  background-color:rgba(0, 0, 0, 0.5); */
-    border-radius:15px/15px;
-    height: 320px;
-width: 270px;
+    height: 210px;
+width: 140px;
   }
  
 
@@ -1176,7 +1210,10 @@ min-height: 100vw;
     letter-spacing: 5px;
     font-weight: 900;
 }
-.country__title__image {
+
+.country__name img {
+    box-shadow:0px 0px 5px rgba(255, 255, 255, 1);
+    margin: 10px; 
 }
 .country__basic__info__list {
     display: flex;
@@ -1239,17 +1276,29 @@ min-height: 100vw;
     border:1px solid rgba(0, 0, 0, 0.5);
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
     flex-direction: row;
     padding: 15px;
 }
 .souvenir__item {
-    flex: 1 1 100%;
+    flex: 1 1 auto;
     border:1px solid rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+}
+.souvenir__content{
+    display: flex;
+    flex-direction: column;
     padding: 15px;
 }
-.souvenir {
+.souvenir__image {
+    max-width: 340px;
+    height: auto;
 }
+.souvenir__descr {
+    padding: 15px;
+    text-align: justify;
+}
+
+
 .country__tours__list {
     border:1px solid rgba(0, 0, 0, 0.5);
     display: flex;
@@ -1381,7 +1430,7 @@ min-height: 100vw;
 .modal__login h3{
     color:rgba(231, 220, 74, 1);
     font-size: 1.5em;
-     font-family: 'Montserrat', sans-serif;
+     font-family: 'Open Sans', sans-serif;
      font-weight: 100;
      letter-spacing: 1px;  
      background-color: rgba(255, 255, 255, 0.2);
